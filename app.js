@@ -124,7 +124,7 @@ const codeSnippets = {
 
 // Initialize the client
 const zap = new Zaptick({
-  apiKey: 'zt_live_83b19f0ea8a287b320',
+  apiKey: 'YOUR_API_KEY',
   phoneNumberId: '109384918237910'
 });
 
@@ -152,7 +152,7 @@ await zap.whatsapp.sendTemplate({
   ]
 });`,
   curl: `curl -X POST "https://api.zaptick.io/v1/messages" \\
-  -H "Authorization: Bearer zt_live_83b19f0ea8a287b320" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
     "to": "+14155552671",
