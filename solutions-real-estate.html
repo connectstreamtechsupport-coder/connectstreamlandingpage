@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="facebook-domain-verification" content="aju1e3acu789lcn9l8wwgvk0nlpaty" />
-  <title>Real Estate Automation Playbook - Connectstream</title>
-  <meta name="description" content="Scale real estate operations on WhatsApp. Automate property catalogs, score buyers 24/7, and schedule visits seamlessly.">
-  <link rel="stylesheet" href="styles.css">
+  <title>Real Estate WhatsApp Automation Playbook | Connectstream</title>
+  <meta name="description" content="Scale real estate operations on WhatsApp. Automate property catalogs, score buyers 24/7, schedule site visits, and streamline installment collections.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/brand_icon.png">
+  <link rel="apple-touch-icon" href="images/brand_icon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -17,684 +23,877 @@
       theme: {
         extend: {
           colors: {
-            forest: {
-              DEFAULT: '#004D40',
-              light: '#0D2E27',
-              dark: '#00332A'
-            },
-            emerald: {
-              DEFAULT: '#10B981',
-              light: '#34D399',
-              dark: '#059669'
+            brand: {
+              green: '#25D366',
+              teal: '#075E54',
+              darkteal: '#054840',
+              canvas: '#F8FAFC',
+              mint: '#DCF8C6'
             }
           },
           fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace']
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
           }
         }
       }
     }
   </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .bg-light-grid {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+    }
+    .bg-radial-hero {
+      background: radial-gradient(circle at 50% 15%, rgba(37, 211, 102, 0.12) 0%, rgba(7, 94, 84, 0.05) 40%, transparent 70%);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans light-mode antialiased">
+<body class="bg-[#F8FAFC] text-slate-900 selection:bg-brand-green selection:text-slate-950">
 
-  <!-- Sticky Header Navigation Bar -->
-  <header class="flex items-center justify-between w-full px-8 py-4 bg-white border-b border-slate-200 relative mb-6 z-50">
-    <!-- Brand Logo -->
-    <a href="index.html" class="flex items-center text-teal-950 font-black tracking-tight text-xl">
-      <img src="images/logo.png" alt="Connectstream Innovation Lab LLC Logo" class="h-12 w-auto object-contain mr-3">
-      Connectstream Innovation Lab&nbsp;&nbsp;LLC
-    </a>
-    
-    <!-- Right Side Unified Flex Navigation Block -->
-    <div class="hidden md:flex items-center gap-8 ml-auto">
-      <a href="about-us.html" class="text-sm font-semibold text-slate-600 hover:text-teal-950">About Us</a>
+  <!-- ==================== STICKY NAVIGATION HEADER ==================== -->
+  <!-- ==================== GLOBAL STICKY NAVIGATION HEADER ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- Platform Dropdown -->
-      <div class="relative group">
-        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Platform ⌄</span>
-        <div class="w-[500px] absolute top-full right-0 bg-white shadow-xl rounded-2xl border border-slate-200 p-4 z-50 grid grid-cols-2 gap-2 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top-right">
-          
-          <!-- Left Column (CHANNELS & CORE ENGINE) -->
-          <div class="flex flex-col gap-1 text-left">
-            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Channels & Core Engine</div>
-            
-            <a href="whatsapp-api.html" class="flex items-center justify-between p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
-              <span>WhatsApp Business API</span>
-              <span class="font-mono text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">META</span>
-            </a>
-            
-            <a href="click-to-whatsapp.html" class="flex items-center justify-between p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
-              <span>Click to WhatsApp Ads</span>
-              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold font-mono px-1.5 py-0.5 rounded ml-2">Ads</span>
-            </a>
-            
-            <a href="meta-infrastructure.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
-              Meta Cloud Infrastructure
-            </a>
-          </div>
-          
-          <!-- Right Column (FEATURES & AUTOMATION / TOOLKIT) -->
-          <div class="flex flex-col gap-1 text-left">
-            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Features & Automation</div>
-            
-            <a href="chatbot-builder.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
-              AI Chatbot Builder
-            </a>
-            
-            <a href="broadcast-manager.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
-              Broadcast Manager
-            </a>
-            
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/brand_logo.png" alt="Connectstream Business Communication Co." class="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" />
+      </a>
 
-          </div>
-          
-        </div>
-      </div>
-      
-      <!-- Solutions Dropdown -->
-      <div class="relative group">
-        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Solutions ⌄</span>
-        <div class="w-[240px] absolute top-full right-0 bg-white shadow-xl rounded-2xl border border-slate-200 p-3 z-50 flex flex-col gap-1 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top-right">
-          <a href="solutions-real-estate.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Real Estate</a>
-          <a href="solutions-education.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Education</a>
-          <a href="solutions-finance.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Financial Services</a>
-          <a href="solutions-ecommerce.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">E-commerce</a>
-          <a href="solutions-healthcare.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Healthcare</a>
-          <a href="solutions-hospitality.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Hospitality</a>
-        </div>
-      </div>
-
-      <!-- Resources Dropdown -->
-      <div class="relative group">
-        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Resources ⌄</span>
-        <div class="w-[320px] flex flex-col gap-1 top-full right-0 bg-white shadow-xl rounded-xl border border-slate-200 p-5 z-50 transition-all duration-200 transform origin-top-right invisible opacity-0 scale-95 pointer-events-none absolute group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto">
-          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 px-2">LEARN & GROW - Resources</div>
-          <div class="flex flex-col gap-1">
-
-            <a href="why-connectstream.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
-              <div class="font-bold text-slate-900 text-xs">Why Connectstream?</div>
-              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">See how 100+ businesses across 6+ countries scale their customer engagement platform.</div>
-            </a>
-            <a href="blog.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
-              <div class="font-bold text-slate-900 text-xs">Blog</div>
-              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Deep industry case studies, conversion optimization formulas & Meta API updates.</div>
-            </a>
-            <a href="partner-program.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
-              <div class="font-bold text-slate-900 text-xs">Partner Program</div>
-              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Earn monthly commissions within the Connectstream ecosystem.</div>
-            </a>
-          </div>
-          <div class="border-t border-slate-100 mt-2 pt-2 px-2">
-            <a href="blog.html" class="text-xs text-emerald-600 hover:text-emerald-700 font-bold block">Latest from the blog →</a>
-          </div>
-        </div>
-      </div>
-
-      <a href="pricing.html" class="text-sm font-semibold text-slate-600 hover:text-teal-950">Pricing</a>
-
-      <!-- WhatsApp Action Badge -->
-      <button class="w-8 h-8 rounded-full bg-emerald-50 hover:bg-emerald-100 flex items-center justify-center text-emerald-600 transition" aria-label="WhatsApp Chat">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.618-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-      </button>
-
-      <!-- Get started Action -->
-      
-      <a href="pricing.html" class="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition shadow-sm">Get started</a>
-    </div>
-
-    <!-- Hamburger Icon for Mobile -->
-    <button id="mobile-menu-button" class="md:hidden text-teal-950 hover:text-teal-800 focus:outline-none z-50 ml-auto p-1" aria-label="Toggle Navigation">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-    
-    <!-- Mobile Drawer Overlay Dropdown -->
-    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 z-40 shadow-xl flex flex-col p-6 space-y-4 md:hidden">
-      <a href="about-us.html" class="text-sm font-semibold text-slate-600 hover:text-teal-950 py-1">About Us</a>
-
-      <!-- Platform Section -->
-      <div>
-        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">Platform</div>
-        <div class="flex flex-col gap-2 pl-3">
-          <a href="whatsapp-api.html" class="text-sm font-semibold text-teal-950">WhatsApp Business API</a>
-          <a href="click-to-whatsapp.html" class="text-sm font-semibold text-teal-950">Click to WhatsApp Ads</a>
-          <a href="meta-infrastructure.html" class="text-sm font-semibold text-teal-950">Meta Cloud Infrastructure</a>
-          <a href="chatbot-builder.html" class="text-sm font-semibold text-teal-950">AI Chatbot Builder</a>
-          <a href="broadcast-manager.html" class="text-sm font-semibold text-teal-950">Broadcast Manager</a>
-        </div>
-      </div>
-      
-      <!-- Solutions Section -->
-      <div>
-        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">Solutions</div>
-        <div class="flex flex-col gap-2 pl-3">
-          <a href="solutions-real-estate.html" class="text-sm font-semibold text-teal-950">Real Estate</a>
-          <a href="solutions-education.html" class="text-sm font-semibold text-teal-950">Education</a>
-          <a href="solutions-finance.html" class="text-sm font-semibold text-teal-950">Financial Services</a>
-          <a href="solutions-ecommerce.html" class="text-sm font-semibold text-teal-950">E-commerce</a>
-          <a href="solutions-healthcare.html" class="text-sm font-semibold text-teal-950">Healthcare</a>
-          <a href="solutions-hospitality.html" class="text-sm font-semibold text-teal-950">Hospitality</a>
-        </div>
-      </div>
-      
-      <!-- Resources Section -->
-      <div>
-        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">Resources</div>
-        <div class="flex flex-col gap-2 pl-3">
-          
-          <a href="why-connectstream.html" class="text-sm font-semibold text-teal-950">Why Connectstream?</a>
-          <a href="blog.html" class="text-sm font-semibold text-teal-950">Blog</a>
-          <a href="partner-program.html" class="text-sm font-semibold text-teal-950">Partner Program</a>
-        </div>
-      </div>
-
-      <a href="pricing.html" class="text-sm font-semibold text-slate-600 hover:text-teal-950 py-1">Pricing</a>
-
-      <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+      <!-- Desktop Nav Mega Dropdowns -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold text-slate-600">
         
-        <a href="pricing.html" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition shadow-sm">Get started</a>
+        <!-- About Us -->
+        <a href="about-us.html" class="hover:text-[#075E54] transition py-1">About Us</a>
+
+        <!-- Platform Dropdown (2-Column Mega Menu) -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 hover:text-[#075E54] transition py-1 focus:outline-none">
+            <span>Platform</span>
+            <span class="text-[11px] text-slate-400 group-hover:text-[#075E54] transition-transform group-hover:rotate-180">⌄</span>
+          </button>
+          <div class="w-[520px] absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-2xl rounded-2xl border border-slate-200/90 p-4 z-50 grid grid-cols-2 gap-3 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top">
+            
+            <!-- Left Column: CHANNELS & CORE ENGINE -->
+            <div class="flex flex-col gap-1 text-left">
+              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Channels &amp; Core Engine</div>
+              
+              <a href="whatsapp-api.html" class="flex items-center justify-between p-2.5 rounded-xl text-slate-900 hover:bg-slate-50 hover:text-[#075E54] transition-colors">
+                <div>
+                  <div class="text-xs font-bold">WhatsApp Business API</div>
+                  <div class="text-[11px] text-slate-500 font-normal">Official Meta Cloud API quotas</div>
+                </div>
+                <span class="font-mono text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">META</span>
+              </a>
+              
+              <a href="click-to-whatsapp.html" class="flex items-center justify-between p-2.5 rounded-xl text-slate-900 hover:bg-slate-50 hover:text-[#075E54] transition-colors">
+                <div>
+                  <div class="text-xs font-bold">Click to WhatsApp Ads</div>
+                  <div class="text-[11px] text-slate-500 font-normal">Turn ad traffic into direct chats</div>
+                </div>
+                <span class="bg-amber-50 text-amber-700 text-[9px] font-bold font-mono px-1.5 py-0.5 rounded">ADS</span>
+              </a>
+              
+              <a href="meta-infrastructure.html" class="flex items-center p-2.5 rounded-xl text-slate-900 hover:bg-slate-50 hover:text-[#075E54] transition-colors">
+                <div>
+                  <div class="text-xs font-bold">Meta Cloud Infrastructure</div>
+                  <div class="text-[11px] text-slate-500 font-normal">Zero-ban risk &amp; 99.9% uptime</div>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Right Column: FEATURES & AUTOMATION -->
+            <div class="flex flex-col gap-1 text-left">
+              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Features &amp; Automation</div>
+              
+              <a href="chatbot-builder.html" class="flex items-center p-2.5 rounded-xl text-slate-900 hover:bg-slate-50 hover:text-[#075E54] transition-colors">
+                <div>
+                  <div class="text-xs font-bold">AI Chatbot Builder</div>
+                  <div class="text-[11px] text-slate-500 font-normal">No-code 24/7 conversational flows</div>
+                </div>
+              </a>
+              
+              <a href="broadcast-manager.html" class="flex items-center p-2.5 rounded-xl text-slate-900 hover:bg-slate-50 hover:text-[#075E54] transition-colors">
+                <div>
+                  <div class="text-xs font-bold">Broadcast Manager</div>
+                  <div class="text-[11px] text-slate-500 font-normal">Mass personalized broadcast campaigns</div>
+                </div>
+              </a>
+              
+              <a href="integrations.html" class="flex items-center p-2.5 rounded-xl text-slate-900 hover:bg-slate-50 hover:text-[#075E54] transition-colors">
+                <div>
+                  <div class="text-xs font-bold">CRM &amp; Integrations</div>
+                  <div class="text-[11px] text-slate-500 font-normal">Shopify, HubSpot, Zoho &amp; Webhooks</div>
+                </div>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Solutions Dropdown -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 hover:text-[#075E54] transition py-1 focus:outline-none">
+            <span>Solutions</span>
+            <span class="text-[11px] text-slate-400 group-hover:text-[#075E54] transition-transform group-hover:rotate-180">⌄</span>
+          </button>
+          <div class="w-[260px] absolute top-full left-0 bg-white shadow-2xl rounded-2xl border border-slate-200/90 p-3 z-50 flex flex-col gap-1 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top">
+            <div class="text-[10px] font-mono font-bold text-slate-400 uppercase px-3 py-1.5">Industry Solutions</div>
+            <a href="solutions-real-estate.html" class="block p-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50 hover:text-[#075E54] transition">Real Estate &amp; Property</a>
+            <a href="solutions-ecommerce.html" class="block p-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50 hover:text-[#075E54] transition">E-Commerce &amp; Retail</a>
+            <a href="solutions-education.html" class="block p-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50 hover:text-[#075E54] transition">Education &amp; EdTech</a>
+            <a href="solutions-finance.html" class="block p-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50 hover:text-[#075E54] transition">Financial Services &amp; Banking</a>
+            <a href="solutions-healthcare.html" class="block p-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50 hover:text-[#075E54] transition">Healthcare &amp; Clinics</a>
+            <a href="solutions-hospitality.html" class="block p-2 rounded-xl text-xs font-bold text-slate-800 hover:bg-slate-50 hover:text-[#075E54] transition">Hospitality &amp; Tourism</a>
+          </div>
+        </div>
+
+        <!-- Resources Dropdown -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 hover:text-[#075E54] transition py-1 focus:outline-none">
+            <span>Resources</span>
+            <span class="text-[11px] text-slate-400 group-hover:text-[#075E54] transition-transform group-hover:rotate-180">⌄</span>
+          </button>
+          <div class="w-[340px] absolute top-full left-0 bg-white shadow-2xl rounded-2xl border border-slate-200/90 p-4 z-50 flex flex-col gap-1 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top">
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2 px-2">Learn &amp; Grow - Resources</div>
+            <div class="flex flex-col gap-1">
+              <a href="why-connectstream.html" class="block hover:bg-slate-50 p-2.5 rounded-xl transition">
+                <div class="font-bold text-slate-900 text-xs">Why Connectstream?</div>
+                <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">See how 100+ businesses across 6+ countries scale customer engagement.</div>
+              </a>
+              <a href="blog.html" class="block hover:bg-slate-50 p-2.5 rounded-xl transition">
+                <div class="font-bold text-slate-900 text-xs">Blog &amp; Case Studies</div>
+                <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Deep industry case studies, conversion optimization formulas &amp; Meta API updates.</div>
+              </a>
+              <a href="partner-program.html" class="block hover:bg-slate-50 p-2.5 rounded-xl transition">
+                <div class="font-bold text-slate-900 text-xs">Partner Program</div>
+                <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Earn recurring monthly commissions within the Connectstream ecosystem.</div>
+              </a>
+            </div>
+            <div class="border-t border-slate-100 mt-2 pt-2 px-2">
+              <a href="blog.html" class="text-xs text-emerald-600 hover:text-emerald-700 font-bold flex items-center justify-between">
+                <span>Latest from the blog</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Link -->
+        <a href="pricing.html" class="hover:text-[#075E54] transition py-1">Pricing</a>
+
+        <!-- Contact Us Link -->
+        <a href="contact-us.html" class="hover:text-[#075E54] transition py-1">Contact</a>
+      </nav>
+
+      <!-- Action Buttons & Circular WhatsApp Action Badge -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Circular WhatsApp Action Button -->
+        <a href="https://wa.me/97455603231" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-emerald-50 hover:bg-emerald-100 border border-emerald-200/70 flex items-center justify-center text-emerald-600 transition shadow-xs group" aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
+          <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.618-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+          </svg>
+        </a>
+
+        <!-- Sign In -->
+        <a href="https://app.connectstream.io/login" class="text-xs font-bold text-slate-700 hover:text-[#075E54] px-3.5 py-2 transition hidden sm:inline-block">
+          Sign In
+        </a>
+
+        <!-- Get Started Action -->
+        <a href="pricing.html" class="inline-flex items-center gap-1.5 bg-[#075E54] hover:bg-[#054840] text-white text-xs font-bold px-4 sm:px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all hover:-translate-y-0.5">
+          <span>Get Started</span>
+          <svg class="w-3.5 h-3.5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Navigation Menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </div>
+
     </div>
 
-    <!-- Toggle Script -->
-    <script>
-      (function() {
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-        if (btn && menu) {
-          btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
-              btn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>`;
-            } else {
-              btn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
-            }
-          });
-        }
-      })();
-    </script>
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="lg:hidden hidden bg-white border-b border-slate-200 px-6 py-6 transition-all duration-300 max-h-[80vh] overflow-y-auto">
+      <div class="flex flex-col gap-4 text-sm font-bold text-slate-800">
+        
+        <a href="about-us.html" class="hover:text-[#075E54] py-1">About Us</a>
+
+        <!-- Platform Section -->
+        <div class="pt-2 border-t border-slate-100">
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-2">Platform</div>
+          <div class="grid grid-cols-1 gap-2 pl-2 text-xs font-semibold text-slate-600">
+            <a href="whatsapp-api.html" class="hover:text-[#075E54]">WhatsApp Business API</a>
+            <a href="click-to-whatsapp.html" class="hover:text-[#075E54]">Click to WhatsApp Ads</a>
+            <a href="meta-infrastructure.html" class="hover:text-[#075E54]">Meta Cloud Infrastructure</a>
+            <a href="chatbot-builder.html" class="hover:text-[#075E54]">AI Chatbot Builder</a>
+            <a href="broadcast-manager.html" class="hover:text-[#075E54]">Broadcast Manager</a>
+            <a href="integrations.html" class="hover:text-[#075E54]">CRM &amp; Integrations</a>
+          </div>
+        </div>
+
+        <!-- Solutions Section -->
+        <div class="pt-2 border-t border-slate-100">
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-2">Solutions</div>
+          <div class="grid grid-cols-2 gap-2 pl-2 text-xs font-semibold text-slate-600">
+            <a href="solutions-real-estate.html" class="hover:text-[#075E54]">Real Estate</a>
+            <a href="solutions-education.html" class="hover:text-[#075E54]">Education</a>
+            <a href="solutions-finance.html" class="hover:text-[#075E54]">Financial Services</a>
+            <a href="solutions-ecommerce.html" class="hover:text-[#075E54]">E-commerce</a>
+            <a href="solutions-healthcare.html" class="hover:text-[#075E54]">Healthcare</a>
+            <a href="solutions-hospitality.html" class="hover:text-[#075E54]">Hospitality</a>
+          </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="pt-2 border-t border-slate-100">
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-2">Resources</div>
+          <div class="grid grid-cols-1 gap-2 pl-2 text-xs font-semibold text-slate-600">
+            <a href="why-connectstream.html" class="hover:text-[#075E54]">Why Connectstream?</a>
+            <a href="blog.html" class="hover:text-[#075E54]">Blog &amp; Case Studies</a>
+            <a href="partner-program.html" class="hover:text-[#075E54]">Partner Program</a>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-100 flex flex-col gap-2.5">
+          <a href="pricing.html" class="hover:text-[#075E54]">Pricing</a>
+          <a href="contact-us.html" class="hover:text-[#075E54]">Contact Us</a>
+          <a href="https://wa.me/97455603231" target="_blank" rel="noopener noreferrer" class="text-emerald-600 font-bold flex items-center gap-2">
+            <span>💬 Chat on WhatsApp</span>
+          </a>
+          <a href="https://app.connectstream.io/login" class="text-[#075E54]">Sign In to Workspace</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Playbook Hero -->
-  <section class="pt-32 pb-12 text-center relative overflow-hidden bg-gradient-to-b from-emerald-500/10 via-slate-50 to-slate-50">
-    <div class="container mx-auto px-6 max-w-4xl relative z-10">
-      <div class="inline-block bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-[11px] tracking-widest font-mono font-bold px-3 py-1 rounded-full mb-6 uppercase">
-        ✓ REAL ESTATE AUTOMATION ENGINE
-      </div>
-      <h1 class="text-4xl font-black text-teal-950 tracking-tight leading-tight">
-        Generate More Property Leads & Automate Site Visits
-      </h1>
-      <p class="text-slate-500 mt-2 text-sm max-w-xl leading-relaxed mx-auto">
-        Capture customer inbound requirements, schedule structural tours, and track client inquiries 24/7 all inside WhatsApp. Close real estate deals faster with an AI Sales Assistant.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4 mt-8">
-        <a href="pricing.html" class="bg-teal-950 hover:bg-teal-900 text-white font-semibold py-3 px-6 rounded-lg shadow-sm transition-all duration-200">
-          Deploy Playbook
-        </a>
-        <a href="pricing.html" class="bg-white hover:bg-slate-100 text-teal-950 border border-slate-200 font-semibold py-3 px-6 rounded-lg shadow-xs transition-all duration-200">
-          Talk to Support
-        </a>
+  <!-- ==================== PLAYBOOK HERO ==================== -->
+  <section class="relative py-16 lg:py-24 overflow-hidden bg-radial-hero bg-light-grid border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Copy & Actions (7 cols) -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/80 px-4 py-1.5 rounded-full text-xs font-bold text-emerald-800 mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+            <span>REAL ESTATE AUTOMATION PLAYBOOK</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Generate More Property Leads &amp; <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal via-emerald-600 to-brand-green">Automate Site Visits 24/7</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 mt-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Capture inbound buyer requirements, dispatch floor plans instantly, score high-intent buyers, and schedule structural visits — all without manual agent bottleneck.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-8">
+            <a href="https://app.connectstream.io" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-bold text-white bg-brand-teal hover:bg-brand-darkteal shadow-lg shadow-teal-900/10 transition-all">
+              <span>Deploy Real Estate Playbook</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="contact-us.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200/80 shadow-xs transition-all">
+              <span>Book Architecture Demo</span>
+            </a>
+          </div>
+
+          <!-- Trust Subtext -->
+          <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-500 font-medium">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-green font-bold">✓</span>
+              <span>Instant Property Brochure Pings</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-green font-bold">✓</span>
+              <span>HubSpot &amp; Salesforce Lead Sync</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-green font-bold">✓</span>
+              <span>24/7 Automated Viewing Calendar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Natural Character Identity Showcase (5 cols) -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+          <div class="relative flex items-center justify-center">
+            <!-- Natural Standing Character Image with Drop Shadow -->
+            <img 
+              src="images/characters/character_lead_executive.png" 
+              alt="Connectstream Real Estate Solutions Director" 
+              class="h-[360px] sm:h-[420px] lg:h-[460px] w-auto object-contain pointer-events-none drop-shadow-2xl transition-transform hover:scale-[1.02] duration-300"
+              loading="eager"
+            />
+            
+            <!-- Floating Verified Telemetry Badge -->
+            <div class="absolute -bottom-3 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-xl px-4 py-2 rounded-2xl flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-emerald-50 text-brand-teal flex items-center justify-center text-xs font-bold">
+                🏢
+              </div>
+              <div class="text-left">
+                <div class="text-[11px] font-bold text-slate-900 flex items-center gap-1">
+                  <span>Senior Real Estate Director</span>
+                  <span class="text-[#25D366] text-xs">✓</span>
+                </div>
+                <div class="text-[9px] font-mono text-emerald-600 font-semibold">Luxury Brokerage &amp; Site Visits</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Realistic CSS/HTML Real Estate Analytics & Conversation Workspace Mockup Panel -->
-  <main class="pb-24 bg-slate-50">
-    <div class="bg-slate-50 rounded-3xl border border-slate-200 p-6 shadow-xl w-full max-w-4xl mx-auto grid grid-cols-1 gap-6 mt-12 animate-fade-in">
+  <!-- ==================== REAL ESTATE WORKSPACE & ANALYTICS MOCKUP ==================== -->
+  <section class="py-20 bg-white border-b border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-6">
       
-      <!-- Top Row - Core Performance Stat Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- Card 1 (New Leads) -->
-        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col justify-between">
-          <span class="text-[9px] font-bold text-slate-400 tracking-wider uppercase font-mono">NEW LEADS</span>
-          <div class="flex items-baseline justify-between mt-2">
-            <span class="text-2xl font-extrabold text-teal-950">1,241</span>
-            <span class="text-xs font-bold text-emerald-600">+18%</span>
+      <div class="bg-slate-50/90 rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xl">
+        
+        <!-- Top Metrics Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+            <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase font-mono">NEW INBOUND LEADS</span>
+            <div class="flex items-baseline justify-between mt-2">
+              <span class="text-2xl font-extrabold text-slate-900">1,241</span>
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+18% MoM</span>
+            </div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+            <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase font-mono">SITE VISITS SCHEDULED</span>
+            <div class="flex items-baseline justify-between mt-2">
+              <span class="text-2xl font-extrabold text-brand-teal">892</span>
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+12% MoM</span>
+            </div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+            <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase font-mono">AI QUALIFIED RATIO</span>
+            <div class="flex items-baseline justify-between mt-2">
+              <span class="text-2xl font-extrabold text-emerald-600">96.4%</span>
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+4.2%</span>
+            </div>
           </div>
         </div>
-        <!-- Card 2 (Site Visits) -->
-        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col justify-between">
-          <span class="text-[9px] font-bold text-slate-400 tracking-wider uppercase font-mono">SITE VISITS</span>
-          <div class="flex items-baseline justify-between mt-2">
-            <span class="text-2xl font-extrabold text-emerald-600">892</span>
-            <span class="text-xs font-bold text-emerald-600">+12%</span>
+
+        <!-- Middle: AI Sales Assistant Chat Simulation -->
+        <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-xs mb-6">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-emerald-100 text-brand-teal flex items-center justify-center font-bold text-xs">
+                AI
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-900 block">AI Sales Agent (Doha &amp; Dubai Properties)</span>
+                <span class="text-[10px] text-slate-400 font-mono">Real-time intent routing active</span>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 font-mono text-[10px] font-bold px-2.5 py-1 rounded-full">
+              <span class="w-2 h-2 bg-brand-green rounded-full animate-ping"></span>
+              142 active sessions
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-3 font-sans text-xs">
+            <!-- Buyer query -->
+            <div class="bg-slate-100 text-slate-800 p-3.5 rounded-2xl rounded-tl-none max-w-[80%] self-start border border-slate-200/60">
+              Are there any 3BHK penthouse options available in West Bay with sea views?
+            </div>
+            
+            <!-- AI Response -->
+            <div class="bg-brand-teal text-white p-4 rounded-2xl rounded-tr-none max-w-[85%] self-end shadow-md leading-relaxed">
+              Yes! Skyline Tower 2 has premium 3BHK penthouses starting at $480,000 with private terrace access and full sea views. I’ve attached the structural layout and 3D walkthrough video above. Would you like to schedule an on-site private viewing?
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex justify-end gap-2 mt-1">
+              <button onclick="triggerDemoAction(this, 'VIP site walkthrough scheduled for Saturday 4:00 PM. Lead assigned to Luxury Desk.')" class="border border-slate-200 rounded-full px-3 py-1.5 bg-white text-slate-700 font-semibold hover:bg-slate-50 transition shadow-2xs">Yes, schedule visit</button>
+              <button onclick="triggerDemoAction(this, 'Floor plan and architectural specifications PDF sent to chat.')" class="border border-slate-200 rounded-full px-3 py-1.5 bg-white text-slate-700 font-semibold hover:bg-slate-50 transition shadow-2xs">Download PDF Brochure</button>
+            </div>
           </div>
         </div>
-        <!-- Card 3 (AI Qualified) -->
-        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col justify-between">
-          <span class="text-[9px] font-bold text-slate-400 tracking-wider uppercase font-mono">AI QUALIFIED</span>
-          <div class="flex items-baseline justify-between mt-2">
-            <span class="text-2xl font-extrabold text-blue-600">96%</span>
-            <span class="text-xs font-bold text-emerald-600">+4%</span>
+
+        <!-- Bottom: Pipeline Funnel Progress -->
+        <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-xs">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-4 block">PIPELINE CONVERSION HEALTH</span>
+          <div class="space-y-3.5 text-xs">
+            <div>
+              <div class="flex justify-between font-semibold text-slate-700 mb-1">
+                <span>Inquiries Captured (Click-to-WhatsApp)</span>
+                <span class="font-mono">100% (1,241)</span>
+              </div>
+              <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                <div class="bg-slate-800 h-full rounded-full" style="width: 100%;"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between font-semibold text-slate-700 mb-1">
+                <span>AI Pre-Qualified (Budget &amp; Timeline Verified)</span>
+                <span class="font-mono">72% (893)</span>
+              </div>
+              <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                <div class="bg-brand-teal h-full rounded-full" style="width: 72%;"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between font-semibold text-slate-700 mb-1">
+                <span>Site Visit Booked &amp; Confirmed</span>
+                <span class="font-mono">48% (595)</span>
+              </div>
+              <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                <div class="bg-brand-green h-full rounded-full" style="width: 48%;"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between font-semibold text-slate-700 mb-1">
+                <span>Offer Negotiation &amp; Token Paid</span>
+                <span class="font-mono">20% (248)</span>
+              </div>
+              <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                <div class="bg-sky-500 h-full rounded-full" style="width: 20%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CORE METRICS BAR ==================== -->
+  <section class="py-16 bg-slate-50 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-xs">
+          <span class="text-3xl font-extrabold text-slate-900 block">95%+</span>
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider mt-1 block">Message Open Rate</span>
+        </div>
+        <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-xs">
+          <span class="text-3xl font-extrabold text-brand-green block">3X</span>
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider mt-1 block">Faster Lead Responses</span>
+        </div>
+        <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-xs">
+          <span class="text-3xl font-extrabold text-sky-600 block">1M+</span>
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider mt-1 block">Prospective Buyer Reach</span>
+        </div>
+        <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-xs">
+          <span class="text-3xl font-extrabold text-amber-500 block">60%+</span>
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider mt-1 block">Payment Collection Rate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WORKFLOW MODULE 1: CLICK TO WHATSAPP LEADS ==================== -->
+  <section class="py-24 bg-white border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="flex items-center gap-2 mb-3 text-xs text-brand-teal font-mono font-bold">
+          <span>01 - ACQUIRE</span>
+          <span class="bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full text-[10px]">META ADS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          Generate <span class="text-brand-green">High-Intent Leads</span> with Zero Dropoff
+        </h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Convert Meta ad clicks directly into instant WhatsApp threads. Collect verified buyer mobile numbers instantly, qualify budget preferences with interactive lists, and eliminate clunky form friction.
+        </p>
+        <div class="space-y-3 font-semibold text-slate-700 text-xs">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Pre-filled ad referral source and campaign tracking parameters</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Instant property brochure and floor plan delivery</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Auto-assignment to territory broker in HubSpot or Salesforce</span>
           </div>
         </div>
       </div>
 
-      <!-- Middle Row - Active AI Sales Assistant Chat Thread -->
-      <div class="bg-white border border-slate-100 rounded-xl shadow-sm p-4 flex flex-col gap-4 text-left">
-        <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-700">
-          <span>AI Sales Assistant</span>
-          <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 font-mono text-[9px] font-bold px-2 py-0.5 rounded-full">
-            <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
-            142 active
+      <!-- Preview Card -->
+      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-md">
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-3">
+          <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+            <div class="w-9 h-9 rounded-full bg-brand-teal text-white flex items-center justify-center font-bold text-xs">CS</div>
+            <div>
+              <span class="text-xs font-bold text-slate-900 block">Connectstream Realty Residences</span>
+              <span class="text-[10px] text-slate-400">Sponsored • Instagram &amp; Facebook Feed</span>
+            </div>
+          </div>
+          <div class="h-32 bg-emerald-50/70 border border-emerald-100 rounded-xl flex flex-col items-center justify-center text-center p-4">
+            <span class="text-xs font-bold text-slate-800">Lusail Luxury Waterfront Apartments</span>
+            <span class="text-[11px] text-emerald-700 font-medium mt-1">Starting from QAR 1.4M with 5-Year Payment Plan</span>
+          </div>
+          <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+            <span class="text-[11px] text-slate-500 font-medium">Direct Developer Allocation</span>
+            <span class="bg-brand-green text-slate-950 font-bold text-xs px-3 py-1 rounded-full">Chat on WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WORKFLOW MODULE 2: AUTOMATE INSTALLMENTS & RENT ==================== -->
+  <section class="py-24 bg-slate-50 border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Mobile Simulation -->
+      <div class="lg:order-first order-last flex justify-center">
+        <div class="w-full max-w-sm bg-white rounded-3xl border border-slate-200/90 p-5 shadow-xl">
+          <div class="flex items-center gap-3 border-b border-slate-100 pb-3 mb-4">
+            <div class="w-8 h-8 rounded-full bg-brand-green text-slate-950 font-bold flex items-center justify-center text-xs">
+              ✓
+            </div>
+            <div>
+              <span class="text-xs font-bold text-slate-900 block">Connectstream Property Management</span>
+              <span class="text-[10px] text-slate-400">Official Business Account</span>
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-xs text-slate-700 space-y-3">
+            <p class="leading-relaxed">
+              Dear Resident, your quarterly installment for Unit 1402 (Skyline Residence) of <strong>QAR 18,500</strong> is due on 1st November.
+            </p>
+            <div class="bg-white border border-slate-200 rounded-xl p-3 flex justify-between items-center text-[11px]">
+              <div>
+                <span class="font-bold text-slate-900 block">Invoice #INV-2026-902</span>
+                <span class="text-slate-500">QPay / Debit / Credit Card</span>
+              </div>
+              <span class="text-emerald-700 font-bold font-mono">QAR 18,500</span>
+            </div>
+            <a href="https://app.connectstream.io" class="block w-full bg-brand-green text-slate-950 font-bold text-center py-2.5 rounded-xl hover:bg-emerald-400 transition shadow-xs">
+              Pay Installment Online
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Description -->
+      <div>
+        <div class="flex items-center gap-2 mb-3 text-xs text-brand-teal font-mono font-bold">
+          <span>02 - MANAGE &amp; COLLECT</span>
+          <span class="bg-sky-50 text-sky-700 px-2.5 py-0.5 rounded-full text-[10px]">PAYMENTS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          Automate <span class="text-brand-green">Rent &amp; Milestone Invoices</span>
+        </h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Send timely payment reminders with dynamic invoices directly to tenants and property buyers. Replace manual calls and overdue penalties with frictionless native payment links.
+        </p>
+        <div class="space-y-3 font-semibold text-slate-700 text-xs">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Automated 7-day, 3-day, and due-date notification sequences</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Integration with regional gateways: QPay, Stripe, Checkout.com</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Instant official PDF payment receipt push upon reconciliation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL ENTERPRISE CTA SECTION ==================== -->
+  <section class="py-24 bg-gradient-to-b from-brand-teal to-brand-darkteal text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-light-grid opacity-10"></div>
+    <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-200 mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+        <span>REAL ESTATE ENTERPRISE ACCELERATOR</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Ready to scale your real estate operations?
+      </h2>
+      <p class="text-slate-200 mt-4 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Join leading property developers and brokerage firms automating inquiries, viewings, and transactions with Connectstream.
+      </p>
+      
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+        <a href="https://app.connectstream.io" class="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-bold text-slate-950 bg-brand-green hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 transition-all hover:scale-105">
+          <span>Deploy Playbook Today</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+        <a href="contact-us.html" class="inline-flex items-center gap-2 px-7 py-4 rounded-full text-base font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all">
+          <span>Request Custom Sandbox</span>
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-8 mt-12 text-xs font-medium text-emerald-100">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          <span>QFC Registered Entity #02144</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          <span>Official Meta Cloud API</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          <span>CRM &amp; ERP Two-Way Sync</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5-COLUMN CORPORATE FOOTER ==================== -->
+  <!-- ==================== CORPORATE FOOTER ==================== -->
+  <!-- ==================== CORPORATE FOOTER ==================== -->
+  <!-- ==================== CORPORATE FOOTER ==================== -->
+  <!-- ==================== CORPORATE FOOTER ==================== -->
+  <!-- ==================== CORPORATE FOOTER ==================== -->
+  <!-- ==================== CORPORATE FOOTER ==================== -->
+  <footer class="bg-white border-t border-slate-200 py-10 sm:py-12 text-slate-600 text-xs">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 mb-8">
+        
+        <!-- Col 1: Corporate Details (2 cols on lg) -->
+        <div class="col-span-2 md:col-span-3 lg:col-span-2 text-left">
+          <a href="index.html" class="inline-flex items-center gap-2.5 mb-3 group">
+            <div class="w-8 h-8 flex items-center justify-center shrink-0 transition-transform group-hover:scale-105">
+              <svg viewBox="0 0 54 52" fill="none" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.8478 0.390625H50C51.6569 0.390625 53 1.73377 53 3.39062V19.3524C53 20.5827 52.2489 21.6882 51.1051 22.1414L4.70358 40.5269C2.58531 41.3663 0.341434 39.6308 0.621187 37.3696L4.8705 3.02228C5.05644 1.51933 6.33338 0.390625 7.8478 0.390625Z" fill="#25D366"/>
+                <path d="M34.0917 35.3291L50.1452 27.7401C51.472 27.1129 53 28.0807 53 29.5483V48.5207C53 50.1443 51.1676 51.0913 49.8431 50.1521L33.7896 38.7687C32.5418 37.8839 32.7088 35.9828 34.0917 35.3291Z" fill="#075E54"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-base text-[#075E54] leading-tight">Connectstream Innovation Lab LLC</div>
+              <div class="text-[10px] font-mono text-slate-400">Official Meta WhatsApp Tech Provider</div>
+            </div>
+          </a>
+          <p class="text-slate-500 text-[11px] leading-relaxed mb-4 max-w-xs">
+            Empowering modern enterprises with unified WhatsApp customer acquisition, automated journeys, and conversational commerce.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <!-- Official Meta Business Partner Badge (AiSensy Style - Compact) -->
+            <div class="inline-block bg-white border border-slate-200/90 rounded-xl px-3.5 py-2 shadow-xs hover:shadow-md transition-shadow">
+              <div class="flex items-center gap-1.5 mb-0.5">
+                <!-- Official Meta Infinity Loop Logo -->
+                <svg viewBox="0 0 36 36" fill="none" class="w-5 h-5 text-[#0081FB] shrink-0" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.4 8.5c-3.1 0-5.4 1.7-7.4 4.5-2-2.8-4.3-4.5-7.4-4.5-5.2 0-9.6 4.3-9.6 9.5s4.4 9.5 9.6 9.5c3.1 0 5.4-1.7 7.4-4.5 2 2.8 4.3 4.5 7.4 4.5 5.2 0 9.6-4.3 9.6-9.5s-4.4-9.5-9.6-9.5zm-14.8 15c-3.1 0-5.6-2.5-5.6-5.5s2.5-5.5 5.6-5.5c2.4 0 4.1 1.6 5.6 4-1.5 2.4-3.2 4-5.6 4zm14.8 0c-2.4 0-4.1-1.6-5.6-4 1.5-2.4 3.2-4 5.6-4 3.1 0 5.6 2.5 5.6 5.5s-2.5 5.5-5.6 5.5z" fill="currentColor"/>
+                </svg>
+                <span class="text-sm font-bold text-slate-900 tracking-tight font-sans leading-none">Meta</span>
+              </div>
+              <div class="text-[10px] font-bold text-slate-700 tracking-tight leading-none pl-0.5">
+                Business Partner
+              </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="flex items-center gap-2 text-slate-400">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-50 hover:bg-emerald-50 hover:text-[#075E54] flex items-center justify-center transition border border-slate-200/60" aria-label="LinkedIn">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-50 hover:bg-emerald-50 hover:text-[#075E54] flex items-center justify-center transition border border-slate-200/60" aria-label="X / Twitter">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-50 hover:bg-emerald-50 hover:text-[#075E54] flex items-center justify-center transition border border-slate-200/60" aria-label="Instagram">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-50 hover:bg-emerald-50 hover:text-[#075E54] flex items-center justify-center transition border border-slate-200/60" aria-label="YouTube">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Platform & Channels -->
+        <div class="col-span-1 text-left space-y-2">
+          <div class="font-bold text-slate-900 uppercase font-mono text-[11px] mb-2.5 tracking-wider">Platform &amp; Channels</div>
+          <div><a href="whatsapp-api.html" class="hover:text-[#075E54] transition">WhatsApp Business API</a></div>
+          <div><a href="click-to-whatsapp.html" class="hover:text-[#075E54] transition">Click to WhatsApp Ads</a></div>
+          <div><a href="meta-infrastructure.html" class="hover:text-[#075E54] transition">Meta Infrastructure</a></div>
+          <div><a href="chatbot-builder.html" class="hover:text-[#075E54] transition">AI Chatbot Builder</a></div>
+          <div><a href="broadcast-manager.html" class="hover:text-[#075E54] transition">Broadcast Manager</a></div>
+          <div><a href="integrations.html" class="hover:text-[#075E54] transition">CRM &amp; Integrations</a></div>
+        </div>
+
+        <!-- Col 3: Industry Solutions -->
+        <div class="col-span-1 text-left space-y-2">
+          <div class="font-bold text-slate-900 uppercase font-mono text-[11px] mb-2.5 tracking-wider">Industry Solutions</div>
+          <div><a href="solutions-real-estate.html" class="hover:text-[#075E54] transition">Real Estate</a></div>
+          <div><a href="solutions-ecommerce.html" class="hover:text-[#075E54] transition">E-Commerce</a></div>
+          <div><a href="solutions-education.html" class="hover:text-[#075E54] transition">Education</a></div>
+          <div><a href="solutions-finance.html" class="hover:text-[#075E54] transition">Financial Services</a></div>
+          <div><a href="solutions-healthcare.html" class="hover:text-[#075E54] transition">Healthcare</a></div>
+          <div><a href="solutions-hospitality.html" class="hover:text-[#075E54] transition">Hospitality</a></div>
+        </div>
+
+        <!-- Col 4: Resources & Growth -->
+        <div class="col-span-1 text-left space-y-2">
+          <div class="font-bold text-slate-900 uppercase font-mono text-[11px] mb-2.5 tracking-wider">Resources &amp; Growth</div>
+          <div><a href="why-connectstream.html" class="hover:text-[#075E54] transition">Why Connectstream</a></div>
+          <div><a href="blog.html" class="hover:text-[#075E54] transition">Blog &amp; Case Studies</a></div>
+          <div><a href="partner-program.html" class="hover:text-[#075E54] transition">Partner Program</a></div>
+          <div><a href="integrations.html" class="hover:text-[#075E54] transition">Integrations Ecosystem</a></div>
+        </div>
+
+        <!-- Col 5: Company & Legal -->
+        <div class="col-span-1 text-left space-y-2">
+          <div class="font-bold text-slate-900 uppercase font-mono text-[11px] mb-2.5 tracking-wider">Company &amp; Legal</div>
+          <div><a href="about-us.html" class="hover:text-[#075E54] transition">About Us</a></div>
+          <div><a href="pricing.html" class="hover:text-[#075E54] transition">Pricing Plans</a></div>
+          <div><a href="contact-us.html" class="hover:text-[#075E54] transition">Contact Us</a></div>
+          <div><a href="privacy-policy.html" class="hover:text-[#075E54] transition">Privacy Policy</a></div>
+          <div><a href="terms-of-service.html" class="hover:text-[#075E54] transition">Terms of Service</a></div>
+          <div><a href="data-deletion.html" class="hover:text-[#075E54] transition">User Data Deletion</a></div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-slate-200/90 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-3">
+        <div class="flex flex-wrap items-center gap-2">
+          <span>&copy; 2026 Connectstream Innovation Lab LLC. All rights reserved.</span>
+          <span class="hidden sm:inline text-slate-300">&middot;</span>
+          <span class="inline-flex items-center gap-1.5 text-slate-600 font-semibold font-mono">
+            <svg viewBox="0 0 36 36" fill="none" class="w-3.5 h-3.5 text-[#0081FB] shrink-0"><path d="M26.4 8.5c-3.1 0-5.4 1.7-7.4 4.5-2-2.8-4.3-4.5-7.4-4.5-5.2 0-9.6 4.3-9.6 9.5s4.4 9.5 9.6 9.5c3.1 0 5.4-1.7 7.4-4.5 2 2.8 4.3 4.5 7.4 4.5 5.2 0 9.6-4.3 9.6-9.5s-4.4-9.5-9.6-9.5zm-14.8 15c-3.1 0-5.6-2.5-5.6-5.5s2.5-5.5 5.6-5.5c2.4 0 4.1 1.6 5.6 4-1.5 2.4-3.2 4-5.6 4zm14.8 0c-2.4 0-4.1-1.6-5.6-4 1.5-2.4 3.2-4 5.6-4 3.1 0 5.6 2.5 5.6 5.5s-2.5 5.5-5.6 5.5z" fill="currentColor"/></svg>
+            Meta Business Partner &middot; Official WhatsApp Tech Provider
           </span>
         </div>
-        <!-- Messages -->
-        <div class="flex flex-col gap-3 font-sans">
-          <!-- Inbound Query Bubble (Left Aligned) -->
-          <div class="bg-slate-100 text-slate-800 text-xs p-3 rounded-xl max-w-[80%] self-start border border-slate-200/50">
-            Are there any 3BHK options available in Downtown?
-          </div>
-          <!-- Outbound AI Automation Response (Right Aligned) -->
-          <div class="bg-teal-950 text-white text-xs p-4 rounded-xl max-w-[85%] self-end shadow-md font-medium leading-relaxed">
-            Yes! Skyline Heights has premium 3BHKs starting at $450k. I've sent the floor plans above. Shall I book a site visit?
-          </div>
-          <!-- Quick-Action Response Options Block -->
-          <div class="flex justify-end gap-2 text-[11px] font-bold mt-1">
-            <button class="border border-slate-200 rounded-full px-3 py-1 bg-white text-slate-700 hover:bg-slate-50 transition">Yes, please</button>
-            <button class="border border-slate-200 rounded-full px-3 py-1 bg-white text-slate-700 hover:bg-slate-50 transition">View location</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Row - Real-Time Live Activity Feed -->
-      <div class="bg-white border border-slate-100 rounded-xl shadow-sm p-4 text-left">
-        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">LIVE ACTIVITY (Real-time)</p>
-        <div class="bg-slate-50/70 p-3 rounded-lg border border-slate-100 flex justify-between items-center text-xs">
-          <div class="flex items-center gap-2 text-slate-700">
-            <span class="text-emerald-500">●</span>
-            <span>New lead via Facebook • Looking for 3BHK</span>
-          </div>
-          <span class="text-slate-400 font-mono text-[10px]">now</span>
-        </div>
-      </div>
-
-      <!-- Pipeline Health Funnel Progress Matrices -->
-      <div class="bg-white border border-slate-100 rounded-xl shadow-sm p-5 flex flex-col gap-4 text-left">
-        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-1">PIPELINE HEALTH</p>
-        <div class="space-y-3">
-          <!-- Item 1 -->
-          <div>
-            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Inquiries</span><span>100%</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-slate-800 h-full rounded-full" style="width: 100%;"></div></div>
-          </div>
-          <!-- Item 2 -->
-          <div>
-            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Qualified</span><span>72%</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-forest h-full rounded-full" style="width: 72%;"></div></div>
-          </div>
-          <!-- Item 3 -->
-          <div>
-            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Site Visited</span><span>48%</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-emerald-500 h-full rounded-full" style="width: 48%;"></div></div>
-          </div>
-          <!-- Item 4 -->
-          <div>
-            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Negotiating</span><span>20%</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-blue-400 h-full rounded-full" style="width: 20%;"></div></div>
-          </div>
-          <!-- Item 5 -->
-          <div>
-            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Closed Deals</span><span>8%</span></div>
-            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-yellow-500 h-full rounded-full" style="width: 8%;"></div></div>
-          </div>
+        <div class="flex items-center gap-4 sm:pr-20">
+          <a href="privacy-policy.html" class="hover:text-slate-600 transition">Privacy</a>
+          <a href="terms-of-service.html" class="hover:text-slate-600 transition">Terms</a>
+          <a href="data-deletion.html" class="hover:text-slate-600 transition">Data Deletion</a>
         </div>
       </div>
 
     </div>
-
-    <!-- Horizontal Core Metrics Highlight Bar -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mt-20 mb-16 px-4">
-      <!-- Stat Box 1 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-teal-950">95%+</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Message Open Rate</span>
-      </div>
-      <!-- Stat Box 2 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-emerald-600">3X</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Faster Responses</span>
-      </div>
-      <!-- Stat Box 3 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-sky-600">1M+</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Buyer Reach</span>
-      </div>
-      <!-- Stat Box 4 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-amber-500">60%+</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Engagement Boost</span>
-      </div>
-    </div>
-
-    <!-- Horizontal Core Metrics Highlight Bar -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mt-20 mb-16 px-4">
-      <!-- Stat Box 1 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-teal-950">95%+</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Message Open Rate</span>
-      </div>
-      <!-- Stat Box 2 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-emerald-600">3X</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Faster Responses</span>
-      </div>
-      <!-- Stat Box 3 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-sky-600">1M+</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Buyer Reach</span>
-      </div>
-      <!-- Stat Box 4 -->
-      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
-        <span class="text-2xl font-black text-amber-500">60%+</span>
-        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Engagement Boost</span>
-      </div>
-    </div>
-
-    <!-- NEW WORKFLOW SPLIT MODULE 1: GENERATE HIGH-INTENT LEADS -->
-    <div class="max-w-6xl mx-auto px-6 my-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <!-- Left Column Area (Content Tree) -->
-      <div class="text-left">
-        <div class="flex items-center gap-2 mb-3 text-xs text-slate-400 font-mono font-bold">
-          <span>03 - ACQUIRE</span>
-          <span class="bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full text-[10px]">SMS</span>
-        </div>
-        <h2 class="text-3xl font-black text-teal-950 tracking-tight mb-4">
-          Generate <span class="text-emerald-600">High-Intent Leads</span>
-        </h2>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6">
-          Convert ad clicks into instant WhatsApp conversations with Click-to-WhatsApp campaigns. Capture buyer intent in real time and qualify automatically.
-        </p>
-        <div class="space-y-3 font-medium text-slate-800 text-xs">
-          <div class="flex items-center gap-2"><span>✓</span> <span>Click-to-WhatsApp Ads</span></div>
-          <div class="flex items-center gap-2"><span>✓</span> <span>Automated qualification</span></div>
-          <div class="flex items-center gap-2"><span>✓</span> <span>Instant CRM sync</span></div>
-        </div>
-        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm max-w-[160px] flex flex-col mt-6">
-          <span class="text-xl font-black text-indigo-600">1M+</span>
-          <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider">BUYER REACH</span>
-        </div>
-      </div>
-      <!-- Right Column Area (Visual Interface Layout Card) -->
-      <div class="bg-slate-100 rounded-3xl p-6 border border-slate-200/60 shadow-lg relative flex flex-col items-center justify-center min-h-[340px]">
-        <div class="relative w-full max-w-[280px] bg-slate-800 rounded-lg p-2 pb-6 shadow-md border-b-4 border-slate-700">
-          <div class="bg-white rounded p-3 text-left space-y-2">
-            <div class="flex items-center gap-2 border-b border-slate-100 pb-2">
-              <div class="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-500">ZR</div>
-              <div>
-                <span class="text-[9px] font-bold text-slate-800 block leading-tight">Connectstream Realty</span>
-                <span class="text-[7px] text-slate-400 block leading-none">Sponsored • Facebook</span>
-              </div>
-            </div>
-            <div class="h-20 bg-emerald-50 rounded flex items-center justify-center text-[9px] font-bold text-emerald-800 border border-emerald-100">
-              [ Skyline Premium 3BHK ]
-            </div>
-            <div class="flex justify-between items-center bg-slate-50 p-1.5 rounded border border-slate-100">
-              <span class="text-[8px] text-slate-500">Downtown luxury starting at $450k</span>
-              <span class="bg-emerald-500 text-white font-bold text-[7px] px-2 py-0.5 rounded">Send Message</span>
-            </div>
-          </div>
-        </div>
-        <div class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md border border-slate-200/50 rounded-xl p-3 shadow-sm flex items-center justify-between text-left">
-          <div>
-            <span class="text-[8px] font-mono font-bold text-indigo-600 block uppercase">03 - ACQUIRE</span>
-            <span class="text-[10px] font-extrabold text-teal-950 block">Generate High-Intent Leads</span>
-          </div>
-          <span class="text-[9px] font-mono font-bold text-slate-400">1M+ REACH</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- NEW WORKFLOW SPLIT MODULE 2: AUTOMATE PAYMENT REMINDERS -->
-    <div class="max-w-6xl mx-auto px-6 my-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <!-- Left Column Area (Mobile Phone Core Preview Component) -->
-      <div class="lg:order-first order-last">
-        <div class="bg-slate-900 text-white rounded-[40px] p-3 shadow-2xl border-4 border-slate-800 w-full max-w-[320px] mx-auto relative overflow-hidden h-[540px] flex flex-col">
-          <div class="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20 flex items-center justify-center">
-            <span class="w-2 h-2 bg-slate-800 rounded-full"></span>
-          </div>
-          <div class="flex justify-between px-6 pt-3 text-[10px] font-bold text-slate-400 z-10">
-            <span>9:41</span>
-            <div class="flex gap-1.5">
-              <span>📶</span>
-              <span>🔋</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-2 border-b border-slate-800 pb-3 pt-6 px-4">
-            <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-white text-xs">ZR</div>
-            <div class="text-left">
-              <span class="text-[11px] font-bold block">Connectstream Realty ✓</span>
-              <span class="text-[8px] text-slate-400 block">Verified Business Account</span>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3 p-4 flex-1">
-            <div class="bg-white text-slate-800 text-xs p-3 rounded-2xl rounded-tl-none max-w-[85%] self-start shadow-xs border border-slate-100/50 mt-4 text-left font-sans">
-              <p class="leading-relaxed">Hi Rahul, This is a friendly reminder that your monthly rent of ₹25,000 for the Villeet apartment is due tomorrow. Please pay at your earliest convenience. Thank you!</p>
-              <div class="mt-3 bg-emerald-500 hover:bg-emerald-600 text-white text-center text-xs font-bold p-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition">
-                <span>📂</span> Pay Rent Now
-              </div>
-            </div>
-          </div>
-          <div class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md border border-slate-200/50 rounded-xl p-3 shadow-sm flex items-center justify-between text-left text-slate-800">
-            <div>
-              <span class="text-[8px] font-mono font-bold text-sky-600 block uppercase">04 - MANAGE</span>
-              <span class="text-[10px] font-extrabold text-teal-950 block">Automating Payment Reminders</span>
-            </div>
-            <span class="text-[9px] font-mono font-bold text-slate-400">60%+ BOOST</span>
-          </div>
-        </div>
-      </div>
-      <!-- Right Column Area (Content Tree) -->
-      <div class="text-left">
-        <div class="flex items-center gap-2 mb-3 text-xs text-slate-400 font-mono font-bold">
-          <span>04 - MANAGE</span>
-          <span class="bg-sky-50 text-sky-700 px-2 py-0.5 rounded-full text-[10px]">Email</span>
-        </div>
-        <h2 class="text-3xl font-black text-teal-950 tracking-tight mb-4">
-          Automate <span class="text-emerald-600">Payment Reminders</span>
-        </h2>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6">
-          Send timely rent and installment reminders directly on WhatsApp without manual follow-ups. Reduce payment delays and improve cash flow.
-        </p>
-        <div class="space-y-3 font-medium text-slate-800 text-xs">
-          <div class="flex items-center gap-2"><span>✓</span> <span>Automated installment nudges</span></div>
-          <div class="flex items-center gap-2"><span>✓</span> <span>Rent collection flows</span></div>
-          <div class="flex items-center gap-2"><span>✓</span> <span>Payment links integrated</span></div>
-        </div>
-        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm max-w-[160px] flex flex-col mt-6">
-          <span class="text-xl font-black text-sky-600">60%+</span>
-          <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider">ENGAGEMENT BOOST</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- NEW TWO-COLUMN ANALYTICS MODULE 3: WATCH THE SALES ASSISTANT AT WORK -->
-    <div class="max-w-6xl mx-auto px-6 my-24 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-      <!-- Left Layout - Interactive Assistant Chat Frame -->
-      <div class="text-left">
-        <h3 class="text-2xl font-black text-teal-950 mb-2">Watch the sales assistant at work.</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">The AI handles initial intent checking, document delivery, and schedules the site visit seamlessly.</p>
-        
-        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex flex-col gap-3 text-xs mt-6">
-          <div class="bg-slate-100 text-slate-800 p-3 rounded-2xl rounded-tr-none max-w-[80%] self-end">
-            Hi, I saw your ad for the 3BHK in Downtown.
-          </div>
-          <div class="bg-teal-950 text-white p-3.5 rounded-2xl rounded-tl-none max-w-[80%] self-start leading-relaxed shadow-sm">
-            Hello! Thanks for your interest in Skyline Heights. Are you looking to buy for investment or end-use?
-          </div>
-          <div class="bg-slate-100 text-slate-800 p-3 rounded-2xl rounded-tr-none max-w-[80%] self-end">
-            End-use. Moving in next year.
-          </div>
-          <div class="bg-teal-950 text-white p-3.5 rounded-2xl rounded-tl-none max-w-[80%] self-start leading-relaxed shadow-sm">
-            Great! Skyline Heights has a Dec 2025 possession. I've attached the floor plan and pricing. Shall I schedule a site visit for this weekend?
-          </div>
-          <div class="flex gap-2 justify-start mt-2">
-            <button class="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold px-3 py-1.5 rounded-full text-[10px] shadow-sm">View floor plans</button>
-            <button class="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold px-3 py-1.5 rounded-full text-[10px] shadow-sm">Download Brochure</button>
-            <button class="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold px-3 py-1.5 rounded-full text-[10px] shadow-sm">Talk to Sales</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Layout - Site Visit Performance Graph Frame -->
-      <div class="text-left">
-        <h3 class="text-2xl font-black text-teal-950 mb-2">Site visit performance, at a glance.</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Inquiries and site visits by month — see exactly how Connectstream streamlines your sales funnel.</p>
-        
-        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col gap-4 mt-6">
-          <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-            <div>
-              <span class="text-lg font-black text-teal-950 block">1,640</span>
-              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Peak Inquiries</span>
-            </div>
-            <div>
-              <span class="text-lg font-black text-emerald-600 block">920</span>
-              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Peak Site Visits</span>
-            </div>
-            <div>
-              <span class="text-lg font-black text-sky-600 block">56%</span>
-              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Conversion Rate</span>
-            </div>
-          </div>
-
-          <div class="relative h-48 bg-slate-50 rounded-xl border border-slate-100 p-4 flex flex-col justify-between font-mono text-[9px] text-slate-400">
-            <div class="flex items-end justify-between h-36 border-b border-slate-200 pb-1 relative">
-              <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-slate-800 text-white font-sans text-[9px] font-bold py-1 px-2.5 rounded shadow-md z-10">
-                inquiries: 810 • siteVisits: 380
-              </div>
-              <div class="flex flex-col items-center gap-1 w-8">
-                <div class="w-2.5 bg-slate-300 h-12 rounded-t"></div>
-                <div class="w-2.5 bg-emerald-300 h-6 rounded-t"></div>
-              </div>
-              <div class="flex flex-col items-center gap-1 w-8">
-                <div class="w-2.5 bg-slate-300 h-16 rounded-t"></div>
-                <div class="w-2.5 bg-emerald-300 h-8 rounded-t"></div>
-              </div>
-              <div class="flex flex-col items-center gap-1 w-8 relative ring-2 ring-emerald-500 rounded p-0.5">
-                <div class="w-2.5 bg-slate-400 h-24 rounded-t"></div>
-                <div class="w-2.5 bg-emerald-400 h-12 rounded-t"></div>
-              </div>
-              <div class="flex flex-col items-center gap-1 w-8">
-                <div class="w-2.5 bg-slate-300 h-20 rounded-t"></div>
-                <div class="w-2.5 bg-emerald-300 h-10 rounded-t"></div>
-              </div>
-              <div class="flex flex-col items-center gap-1 w-8">
-                <div class="w-2.5 bg-slate-300 h-28 rounded-t"></div>
-                <div class="w-2.5 bg-emerald-300 h-16 rounded-t"></div>
-              </div>
-              <div class="flex flex-col items-center gap-1 w-8">
-                <div class="w-2.5 bg-slate-300 h-32 rounded-t"></div>
-                <div class="w-2.5 bg-emerald-300 h-20 rounded-t"></div>
-              </div>
-            </div>
-            <div class="flex justify-between px-1">
-              <span>Aug</span>
-              <span>Sep</span>
-              <span>Oct</span>
-              <span>Nov</span>
-              <span>Dec</span>
-              <span>Jan</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-      <!-- Main Footer Layout -->
-        <!-- Main Footer Layout -->
-  <footer class="bg-white border-t border-slate-200 pt-16 pb-16 px-16 max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-[280px_150px_150px_150px_150px] justify-between gap-y-12 text-left relative">
-    
-    <!-- Column 1 (Brand Info & Socials) -->
-    <div class="flex flex-col gap-4 w-full md:w-[280px] max-w-[280px] shrink-0">
-      <a href="index.html" class="inline-flex items-center text-teal-950 font-bold tracking-tight text-base mb-2">
-        <img src="images/logo.png" alt="Connectstream Innovation Lab LLC Logo" class="h-8 w-auto object-contain mr-2">
-        <span class="flex flex-col text-left leading-tight">
-          <span>Connectstream</span>
-          <span>Innovation Lab&nbsp;&nbsp;LLC</span>
-        </span>
-      </a>
-      
-      <div class="text-[11px] text-slate-500 leading-relaxed">
-        Connectstream Innovation Lab LLC<br><br>
-        Office No. 8, Floor No. 1<br>
-        QFC Tower 1<br>
-        Doha, Qatar
-      </div>
-      
-      <div class="text-[11px] text-slate-400 flex flex-col gap-1">
-        <div>Phone: <a href="tel:+97455603231" class="text-slate-600 hover:underline">+974 5560 3231</a></div>
-        
-      </div>
-      
-
-    </div>
-
-    <!-- Column 2 (Product Links) -->
-    <div class="flex flex-col gap-3 text-left w-full md:w-[150px] max-w-[150px]">
-      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Product</h4>
-      <a href="whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Business API</a>
-      <a href="whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Shared Team Inbox</a>
-      <a href="chatbot-builder.html" class="text-sm text-slate-600 hover:text-teal-950">AI Chatbot Builder</a>
-      <a href="broadcast-manager.html" class="text-sm text-slate-600 hover:text-teal-950">Broadcast Manager</a>
-      <a href="click-to-whatsapp.html" class="text-sm text-slate-600 hover:text-teal-950">Click-to-WhatsApp Ads</a>
-      
-    </div>
-
-
-
-    <!-- Column 4 (Industries) -->
-    <div class="flex flex-col gap-3 text-left w-full md:w-[150px] max-w-[150px]">
-      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Industries</h4>
-      <a href="solutions-real-estate.html" class="text-sm text-slate-600 hover:text-teal-950">Real Estate</a>
-      <a href="solutions-education.html" class="text-sm text-slate-600 hover:text-teal-950">Education</a>
-      <a href="solutions-finance.html" class="text-sm text-slate-600 hover:text-teal-950">Financial Services</a>
-      <a href="solutions-ecommerce.html" class="text-sm text-slate-600 hover:text-teal-950">E-commerce</a>
-      <a href="solutions-healthcare.html" class="text-sm text-slate-600 hover:text-teal-950">Healthcare</a>
-      <a href="solutions-hospitality.html" class="text-sm text-slate-600 hover:text-teal-950">Hospitality</a>
-    </div>
-
-    <!-- Column 5 (Company & Resources) -->
-    <div class="flex flex-col gap-3 text-left w-full md:w-[150px] max-w-[150px]">
-      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Company</h4>
-      <a href="about-us.html" class="text-sm text-slate-600 hover:text-teal-950">About Us</a>
-      <a href="contact-us.html" class="text-sm text-slate-600 hover:text-teal-950">Contact Us</a>
-      
-      
-    </div>
-
-    <!-- MANDATORY HORIZONTAL BOTTOM TRUST BADGES ROW -->
-    <div class="w-full border-t border-slate-100 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 col-span-1 md:col-span-5">
-
-
-      <!-- Right Item (WhatsApp Badge) -->
-      <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 flex items-center gap-3 max-w-xs">
-        <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center border border-slate-100 shrink-0">
-          <svg width="16" height="16" fill="#25D366" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.618-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-        </div>
-        <div class="text-left">
-          <p class="text-xs font-bold text-slate-900">Official WhatsApp Business API</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Copyright Row Inside Footer -->
-    <div class="w-full border-t border-slate-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 col-span-1 md:col-span-5">
-      <p class="text-[11px] text-slate-400">
-        &copy; 2026 Connectstream Innovation Lab LLC. All rights reserved.
-      </p>
-      <div class="flex gap-4 text-[11px] text-slate-400 font-medium">
-        <a href="privacy-policy.html" target="_blank" class="hover:underline">Privacy Policy</a>
-        <a href="terms-of-service.html" target="_blank" class="hover:underline">Terms and Conditions</a>
-        
-      </div>
-    </div>
-
   </footer>
 
-  <script src="app.js"></script>
-  </body>
-  </html>
+  <!-- ==================== GLOBAL FLOATING WHATSAPP BUTTON ==================== -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end group" id="global-whatsapp-btn">
+    <!-- Tooltip / Expandable Label -->
+    <a 
+      href="https://wa.me/97455603231?text=Hi%20Connectstream%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20WhatsApp%20API%20platform." 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="hidden sm:flex items-center gap-2 bg-white text-slate-800 text-xs font-bold py-2.5 px-4 rounded-full shadow-xl border border-slate-200/90 mb-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto whitespace-nowrap"
+    >
+      <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+      <span>Chat with us on WhatsApp</span>
+    </a>
+
+    <!-- Floating Circular Button -->
+    <a 
+      href="https://wa.me/97455603231?text=Hi%20Connectstream%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20WhatsApp%20API%20platform." 
+      target="_blank" 
+      rel="noopener noreferrer"
+      aria-label="Chat with Connectstream on WhatsApp"
+      class="relative w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none"
+    >
+      <!-- Subtle Pulse Ping Ring -->
+      <span class="absolute -inset-1 rounded-full bg-[#25D366] opacity-30 animate-ping -z-10"></span>
+      
+      <!-- Online Badge Dot -->
+      <span class="absolute top-1 right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-white rounded-full"></span>
+
+      <!-- Official WhatsApp SVG Icon -->
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.968.568 3.805 1.551 5.361L2.001 22l4.743-1.527c1.498.889 3.242 1.408 5.115 1.408 5.536 0 10.031-4.495 10.031-10.031S17.567 2 12.031 2zm0 18.361c-1.688 0-3.266-.484-4.607-1.318l-.33-.205-2.82.907.924-2.748-.225-.347c-.933-1.442-1.472-3.155-1.472-4.99 0-4.664 3.796-8.46 8.46-8.46 4.665 0 8.46 3.796 8.46 8.46 0 4.665-3.795 8.46-8.46 8.46zm4.646-6.335c-.255-.128-1.507-.743-1.741-.828-.234-.085-.404-.128-.574.128-.17.255-.659.828-.808.999-.149.17-.298.191-.553.064-.255-.128-1.077-.397-2.052-1.266-.759-.677-1.272-1.514-1.421-1.77-.149-.255-.016-.393.112-.52.115-.114.255-.298.383-.447.128-.149.17-.255.255-.425.085-.17.043-.319-.021-.447-.064-.128-.574-1.382-.787-1.892-.207-.497-.419-.429-.574-.437-.149-.008-.319-.009-.489-.009-.17 0-.446.064-.68.319-.234.255-.893.872-.893 2.126 0 1.255.914 2.467 1.042 2.637.128.17 1.8 2.748 4.36 3.854.609.263 1.085.42 1.456.538.612.195 1.168.167 1.608.102.491-.073 1.507-.616 1.72-1.212.213-.595.213-1.105.149-1.212-.064-.106-.234-.17-.489-.298z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Mobile Drawer Toggle Script -->
+  <script>
+    (function initMobileNav() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const hamburger = document.getElementById('hamburger-icon');
+      const close = document.getElementById('close-icon');
+
+      if (btn && drawer) {
+        btn.addEventListener('click', function() {
+          const isOpen = !drawer.classList.contains('hidden');
+          if (isOpen) {
+            drawer.classList.add('hidden');
+            if (hamburger) hamburger.classList.remove('hidden');
+            if (close) close.classList.add('hidden');
+          } else {
+            drawer.classList.remove('hidden');
+            if (hamburger) hamburger.classList.add('hidden');
+            if (close) close.classList.remove('hidden');
+          }
+        });
+      }
+    })();
+  </script>
+
+  <!-- Interactive Demo Action Handler -->
+  <script>
+    function triggerDemoAction(btn, msg) {
+      if (!btn) return;
+      btn.classList.add('ring-2', 'ring-emerald-500');
+      
+      let toast = document.getElementById('demo-action-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'demo-action-toast';
+        toast.className = 'fixed bottom-24 right-6 z-50 max-w-sm bg-slate-900 text-white text-xs p-4 rounded-2xl shadow-2xl border border-slate-700/80 flex items-start gap-3 transition-all duration-300 transform translate-y-10 opacity-0 pointer-events-none';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `
+        <div class="w-7 h-7 rounded-full bg-emerald-500/20 text-[#25D366] flex items-center justify-center shrink-0 text-sm font-bold">✓</div>
+        <div>
+          <div class="font-bold text-white text-[12px]">Interactive Demo Triggered</div>
+          <div class="text-slate-300 text-[11px] mt-0.5 leading-snug">${msg || 'Simulated WhatsApp Cloud API interaction executed.'}</div>
+        </div>
+      `;
+      toast.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        btn.classList.remove('ring-2', 'ring-emerald-500');
+        toast.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3200);
+    }
+  </script>
+
+</body>
+</html>
