@@ -389,142 +389,161 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION (Shopify Cinematic Edge-to-Edge Hero Style) ==================== -->
-  <section class="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#02090a] text-white pt-10 sm:pt-14 lg:pt-20 pb-16">
+  <!-- ==================== HERO SECTION (Shopify Cinematic Showcase Style) ==================== -->
+  <section class="relative min-h-[92vh] flex flex-col justify-start overflow-hidden bg-[#02090a] text-white pt-12 sm:pt-16 pb-20">
     
-    <!-- Edge-to-Edge Cinematic Background Video (Shopify Style) -->
-    <div class="absolute inset-0 size-full overflow-hidden z-0">
-      <video 
-        id="hero-video-player"
-        class="w-full h-full object-cover opacity-60 scale-105 transition-opacity duration-700"
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        preload="auto"
-        poster="images/hero_video_poster.jpg"
-      >
-        <source id="hero-video-source" src="videos/hero_video_1.mp4" type="video/mp4" />
-      </video>
+    <!-- Ambient Radial Glows (Shopify Dark Mode Atmosphere) -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-gradient-to-b from-emerald-500/15 via-[#075E54]/10 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
+    <div class="absolute top-1/3 left-10 w-[400px] h-[300px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+    <div class="absolute top-1/3 right-10 w-[400px] h-[300px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
 
-      <!-- Shopify Dark Cinematic Vignette Overlays -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[#02090a] via-[#02090a]/55 to-[#02090a]/75 z-10 pointer-events-none"></div>
-      <div class="absolute inset-0 bg-radial-[at_20%_45%] from-[#075E54]/30 via-transparent to-[#02090a]/80 z-10 pointer-events-none"></div>
-    </div>
-
-    <!-- Main Hero Content Container (Shopify-Inter Typography & Strictly Left Aligned) -->
-    <div class="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 w-full flex-1 flex flex-col justify-center my-auto">
+    <!-- Container for Hero Copy & Video -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 w-full flex flex-col items-center text-center">
       
       <!-- Official Meta Tech Provider Pill Badge -->
-      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-xs font-semibold backdrop-blur-md mb-8 transition-all w-fit shadow-xl shadow-black/30">
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-xs font-semibold backdrop-blur-md mb-6 transition-all shadow-xl shadow-black/30">
         <span class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"></span>
         <span class="font-mono tracking-wide text-emerald-300 font-bold">Official Meta Cloud API Infrastructure</span>
         <span class="text-white/30">•</span>
         <span class="text-white/90">Verified Partner</span>
       </div>
 
-      <!-- Main Display Headline (Shopify Light Display 96px Scale) -->
-      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] xl:text-[6.2rem] font-light tracking-[-0.03em] leading-[1.04] text-white mb-7 max-w-5xl">
-        Pay for utility.<br />
+      <!-- Main Display Headline (Shopify Light Display Typography) -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-[-0.03em] leading-[1.08] text-white mb-5 max-w-4xl">
+        Pay for utility. <br class="hidden sm:inline" />
         <span class="font-normal text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-[#25D366] to-teal-200">
           Never for seats.
         </span>
       </h1>
 
       <!-- Balanced Subtitle (Shopify .text-t6 regular weight) -->
-      <p class="text-lg sm:text-xl lg:text-2xl text-slate-300 font-normal leading-relaxed max-w-2xl text-balance mb-12">
+      <p class="text-base sm:text-lg lg:text-xl text-slate-300 font-normal leading-relaxed max-w-3xl text-balance mb-8">
         Broadcast, Automate, Engage, and Sell – All in One Smart WhatsApp Engagement Platform. Connect with your global audience using official Meta Cloud APIs with zero ban risk and transparent utility quotas.
       </p>
 
-      <!-- Pill Action Buttons (Exact Shopify Primary White & Translucent Outline Pills) -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-16">
+      <!-- Pill Action Buttons (Shopify Primary White & Translucent Outline Pills) -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 w-full sm:w-auto">
         <!-- Primary Solid White Pill -->
-        <a href="https://app.connectstream.io" class="inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full text-base sm:text-lg font-bold text-slate-950 bg-white hover:bg-slate-100 shadow-2xl shadow-white/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
+        <a href="https://app.connectstream.io" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-3.5 rounded-full text-sm sm:text-base font-bold text-slate-950 bg-white hover:bg-slate-100 shadow-2xl shadow-white/20 transition-all hover:scale-105 active:scale-95">
           <span>Launch Your Workspace</span>
-          <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
         </a>
 
         <!-- Secondary Translucent Outline Pill -->
-        <a href="https://wa.me/97455603231" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base sm:text-lg font-semibold text-white bg-white/10 hover:bg-white/20 border-2 border-white/30 backdrop-blur-md transition-all hover:scale-[1.02] active:scale-[0.98]">
-          <svg class="w-5 h-5 fill-[#25D366]" viewBox="0 0 24 24">
+        <a href="https://wa.me/97455603231" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-white/10 hover:bg-white/20 border-2 border-white/30 backdrop-blur-md transition-all hover:scale-105 active:scale-95">
+          <svg class="w-4 h-4 fill-[#25D366]" viewBox="0 0 24 24">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.712.073-2.3-1.025-1.282-.888-2.094-2.164-2.158-2.25-.064-.085-.521-.692-.521-1.321 0-.629.33-1.002.447-1.129.117-.128.256-.16.342-.16.085 0 .17.001.245.006.079.004.187-.03.29.222.106.255.362.883.394.947.032.064.053.139.011.223-.043.085-.064.139-.128.213-.064.075-.137.167-.195.225-.064.064-.132.133-.057.261.075.128.333.548.714.887.491.437.905.573 1.033.637.128.064.202.053.277-.032.075-.085.32-.373.405-.501.085-.128.17-.107.288-.064.117.043.746.352.874.416.128.064.213.096.245.149.032.053.032.31-.112.715z"/>
           </svg>
           <span>Chat on WhatsApp</span>
         </a>
       </div>
 
-      <!-- Proof Metrics Row & Floating Video Controls Bar -->
-      <div class="pt-8 border-t border-white/15 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <!-- ==================== CINEMATIC VIDEO SHOWCASE FRAME (Clean & Unobstructed) ==================== -->
+      <div class="relative w-full max-w-5xl mx-auto mb-12">
         
-        <!-- Live Verified Proof Metrics -->
-        <div class="flex flex-wrap items-center gap-6 sm:gap-10">
-          <div>
-            <div class="text-3xl sm:text-4xl font-extralight text-white font-display">3X</div>
-            <div class="text-xs font-medium text-slate-300 mt-0.5">Better Conversions</div>
-            <div class="text-[11px] text-emerald-400 font-mono">In-thread checkout</div>
-          </div>
-          <div class="h-10 w-px bg-white/15 hidden sm:block"></div>
-          <div>
-            <div class="text-3xl sm:text-4xl font-extralight text-emerald-400 font-display">98.4%</div>
-            <div class="text-xs font-medium text-slate-300 mt-0.5">Open Rate Verified</div>
-            <div class="text-[11px] text-slate-400 font-mono">100k+ messages sent</div>
-          </div>
-          <div class="h-10 w-px bg-white/15 hidden sm:block"></div>
-          <div>
-            <div class="text-3xl sm:text-4xl font-extralight text-white font-display">99.9%</div>
-            <div class="text-xs font-medium text-slate-300 mt-0.5">Risk-Free Delivery</div>
-            <div class="text-[11px] text-emerald-400 font-mono">Meta Cloud Quotas</div>
-          </div>
-        </div>
-
-        <!-- Floating Glass Video Switcher & Audio Controls (Shopify Control Pill) -->
-        <div class="flex items-center gap-2.5 bg-white/10 hover:bg-white/15 backdrop-blur-xl border border-white/20 p-2 rounded-2xl shadow-2xl transition-all">
+        <!-- Glowing Ambient Backlight behind the Video Frame -->
+        <div class="absolute -inset-3 bg-gradient-to-r from-emerald-500/25 via-teal-400/20 to-[#25D366]/25 rounded-[2.5rem] blur-2xl -z-10 animate-pulse-glow"></div>
+        
+        <!-- Showcase Window Device Frame -->
+        <div class="relative bg-slate-950/90 rounded-3xl border border-white/20 shadow-2xl shadow-emerald-950/40 overflow-hidden">
           
-          <!-- Sound Unmute / Mute Toggle -->
-          <button id="hero-sound-toggle-btn" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-medium transition cursor-pointer" title="Toggle Sound">
-            <svg id="hero-sound-muted-icon" class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-            </svg>
-            <svg id="hero-sound-active-icon" class="w-4 h-4 text-emerald-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-            </svg>
-            <span id="hero-sound-text" class="text-[11px] font-mono">Audio Off</span>
-          </button>
+          <!-- Top Window Chrome / Quick Switcher Bar -->
+          <div class="flex items-center justify-between px-5 py-3.5 bg-white/5 border-b border-white/10 backdrop-blur-md">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-400/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-400/80 inline-block"></span>
+              <span class="ml-2 text-xs font-mono text-slate-400 font-semibold hidden sm:inline-flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+                connectstream.io · Official Product Overview
+              </span>
+            </div>
 
-          <!-- Play / Pause Toggle -->
-          <button id="hero-play-toggle-btn" class="p-2 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-medium transition cursor-pointer" title="Pause / Play Video">
-            <svg id="hero-pause-icon" class="w-4 h-4 text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6" />
-            </svg>
-            <svg id="hero-play-icon" class="w-4 h-4 text-emerald-400 hidden" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </button>
+            <!-- Video 1 / Video 2 Switcher Tabs -->
+            <div class="flex items-center gap-1.5 bg-white/10 p-1 rounded-xl text-xs font-mono">
+              <button id="btn-hero-v1" onclick="switchShopifyVideo(1)" class="px-3 py-1 rounded-lg bg-white text-slate-950 font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer">
+                <span>Video 1</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              </button>
+              <button id="btn-hero-v2" onclick="switchShopifyVideo(2)" class="px-3 py-1 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition cursor-pointer">
+                <span>Video 2</span>
+              </button>
+            </div>
+          </div>
 
-          <div class="h-5 w-px bg-white/20"></div>
+          <!-- Video Player (16:9 Aspect Ratio - Completely Clean & Clear) -->
+          <div class="relative aspect-video w-full bg-slate-950 overflow-hidden group">
+            <video 
+              id="hero-video-player"
+              class="w-full h-full object-cover"
+              autoplay 
+              loop 
+              muted 
+              playsinline 
+              preload="auto"
+              poster="images/hero_video_poster.jpg"
+            >
+              <source id="hero-video-source" src="videos/hero_video_1.mp4" type="video/mp4" />
+            </video>
 
-          <!-- Video 1 / Video 2 Quick Switcher Tabs -->
-          <div class="flex items-center gap-1 text-[11px] font-mono">
-            <button id="btn-hero-v1" onclick="switchShopifyVideo(1)" class="px-3 py-1.5 rounded-xl bg-white text-slate-950 font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer">
-              <span>Video 1</span>
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-            </button>
-            <button id="btn-hero-v2" onclick="switchShopifyVideo(2)" class="px-3 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition cursor-pointer">
-              <span>Video 2</span>
-            </button>
+            <!-- Floating Video Playback Controls (Sound & Pause) -->
+            <div class="absolute bottom-4 right-4 flex items-center gap-2.5 z-20">
+              <!-- Sound Toggle Button -->
+              <button id="hero-sound-toggle-btn" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-950/80 hover:bg-slate-900 text-white backdrop-blur-md border border-white/20 transition-all shadow-lg text-xs font-medium cursor-pointer" title="Toggle Sound">
+                <svg id="hero-sound-muted-icon" class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                </svg>
+                <svg id="hero-sound-active-icon" class="w-4 h-4 text-emerald-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+                <span id="hero-sound-text" class="text-xs font-mono">Audio Off</span>
+              </button>
+
+              <!-- Play / Pause Toggle Button -->
+              <button id="hero-play-toggle-btn" class="p-2.5 rounded-xl bg-slate-950/80 hover:bg-slate-900 text-white backdrop-blur-md border border-white/20 transition-all shadow-lg text-xs cursor-pointer" title="Pause / Play Video">
+                <svg id="hero-pause-icon" class="w-4 h-4 text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6" />
+                </svg>
+                <svg id="hero-play-icon" class="w-4 h-4 text-emerald-400 hidden" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+            </div>
+
           </div>
 
         </div>
 
       </div>
 
+      <!-- Proof Metrics Row (Shopify Editions Minimalist Metric Bar) -->
+      <div class="w-full max-w-4xl mx-auto pt-6 border-t border-white/15 flex flex-wrap items-center justify-around gap-6 text-center">
+        <div>
+          <div class="text-3xl sm:text-4xl font-extralight text-white font-display">3X</div>
+          <div class="text-xs font-medium text-slate-300 mt-1">Better Conversions</div>
+          <div class="text-[11px] text-emerald-400 font-mono">In-thread checkout</div>
+        </div>
+        <div class="h-10 w-px bg-white/15 hidden sm:block"></div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extralight text-emerald-400 font-display">98.4%</div>
+          <div class="text-xs font-medium text-slate-300 mt-1">Open Rate Verified</div>
+          <div class="text-[11px] text-slate-400 font-mono">100k+ messages sent</div>
+        </div>
+        <div class="h-10 w-px bg-white/15 hidden sm:block"></div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extralight text-white font-display">99.9%</div>
+          <div class="text-xs font-medium text-slate-300 mt-1">Risk-Free Delivery</div>
+          <div class="text-[11px] text-emerald-400 font-mono">Meta Cloud Quotas</div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Shopify-style Inverted Curved Sheet Transition Edge into Section 2 -->
-    <div class="relative z-20 h-12 bg-white rounded-t-[2.5rem] lg:rounded-t-[3.5rem] -mb-16 border-t border-slate-200/40 shadow-[0_-10px_25px_-5px_rgba(0,0,0,0.3)]"></div>
+    <div class="relative z-20 h-12 bg-white rounded-t-[2.5rem] lg:rounded-t-[3.5rem] -mb-20 border-t border-slate-200/40 shadow-[0_-10px_25px_-5px_rgba(0,0,0,0.3)]"></div>
 
   </section>
 
