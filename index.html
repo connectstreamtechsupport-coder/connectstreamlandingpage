@@ -399,8 +399,8 @@
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- LEFT COLUMN: Headline & Enterprise Copy (7 cols) -->
-        <div class="lg:col-span-7 text-left">
+        <!-- LEFT COLUMN: Headline & Enterprise Copy (6 cols) -->
+        <div class="lg:col-span-6 text-left">
           
           <!-- Official Meta Tech Provider Pill -->
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/90 text-[#075E54] text-xs font-bold mb-6 shadow-xs">
@@ -459,103 +459,135 @@
 
         </div>
 
-        <!-- RIGHT COLUMN: Elegant Visual Showcase with Brand Character (Zero Clipping) -->
-        <div class="lg:col-span-5 relative flex items-center justify-center">
+        <!-- RIGHT COLUMN: Modern Video Showcase (6 cols) -->
+        <div class="lg:col-span-6 relative flex items-center justify-center w-full">
           
           <!-- Outer 3D Perspective Stage -->
-          <div class="relative w-full max-w-[500px] h-[480px] lg:h-[520px] flex items-center justify-center preserve-3d" id="hero-3d-scene">
+          <div class="relative w-full max-w-[620px] mx-auto" id="hero-3d-scene">
             
             <!-- Soft Glowing Radial Ambient Backdrops -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-100/60 to-teal-50/40 rounded-3xl blur-2xl -z-10 animate-pulse-ring"></div>
+            <div class="absolute -inset-4 bg-gradient-to-tr from-[#25D366]/25 via-emerald-400/20 to-teal-500/20 rounded-[2.5rem] blur-2xl -z-10 animate-pulse-glow"></div>
             
-            <!-- 3D Floating Showcase Card (WhatsApp Live Conversation Engine in Background) -->
-            <div class="absolute inset-x-2 sm:inset-x-4 inset-y-4 sm:inset-y-6 bg-white/95 backdrop-blur-xl rounded-3xl border border-slate-200/90 shadow-2xl p-6 sm:p-7 flex flex-col justify-between transform rotate-1 -rotate-y-6 scale-[0.98] transition-transform duration-300 group-hover:rotate-0 z-10">
+            <!-- Video Showcase Frame -->
+            <div class="relative bg-white/95 backdrop-blur-xl rounded-3xl border border-slate-200/90 shadow-2xl shadow-emerald-950/15 overflow-hidden transition-all duration-300 group">
               
-              <!-- Card Header -->
-              <div class="flex items-center justify-between pb-3.5 border-b border-slate-100">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-[#075E54]">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.34 5L2 22l5.17-1.31C8.61 21.49 10.26 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-                  </div>
-                  <div>
-                    <div class="text-xs font-bold text-slate-900 flex items-center gap-1">
-                      <span>Connectstream Hub</span>
-                      <svg class="w-3.5 h-3.5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    </div>
-                    <div class="text-[10px] font-mono text-emerald-600 font-semibold">Official Business Account</div>
-                  </div>
+              <!-- Window Chrome Header -->
+              <div class="flex items-center justify-between px-4 py-3 bg-slate-50/90 border-b border-slate-200/80">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-400/80 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-400/80 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-400/80 inline-block"></span>
+                  <span class="ml-2 text-[11px] font-mono text-slate-500 font-bold hidden sm:inline-flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+                    connectstream.io · Live Product Overview
+                  </span>
                 </div>
-                <span class="text-[10px] font-mono font-bold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full border border-slate-200">
-                  Utility Active
-                </span>
-              </div>
-
-              <!-- Live WhatsApp Messages Mockup (Positioned with clear left margin) -->
-              <div class="space-y-3.5 my-auto pt-2">
                 
-                <!-- Customer Message -->
-                <div class="flex justify-start">
-                  <div class="bg-slate-100 rounded-2xl rounded-tl-xs px-3.5 py-2.5 max-w-[75%] sm:max-w-[70%] text-left text-xs text-slate-800 shadow-2xs">
-                    <p class="font-medium">Hi! Looking to deploy WhatsApp marketing for 85k verified leads next week.</p>
-                    <span class="text-[9px] font-mono text-slate-400 block text-right mt-1">10:14 AM</span>
-                  </div>
+                <!-- Video 1 / Video 2 Quick Switcher Tabs -->
+                <div class="flex items-center gap-1.5 bg-slate-200/70 p-1 rounded-xl text-[10px] font-bold font-mono">
+                  <button 
+                    id="btn-switch-vid1" 
+                    onclick="switchHeroVideo(1)" 
+                    class="px-2.5 py-1 rounded-lg bg-emerald-600 text-white shadow-xs transition-all flex items-center gap-1"
+                  >
+                    <span>Video 1</span>
+                    <span class="text-[9px] bg-white/20 px-1 rounded">Active</span>
+                  </button>
+                  <button 
+                    id="btn-switch-vid2" 
+                    onclick="switchHeroVideo(2)" 
+                    class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-all flex items-center gap-1"
+                  >
+                    <span>Video 2</span>
+                  </button>
                 </div>
+              </div>
 
-                <!-- Bot Automated Qualification -->
-                <div class="flex justify-start">
-                  <div class="bg-[#DCF8C6] border border-emerald-200/80 rounded-2xl rounded-tl-xs px-3.5 py-2.5 max-w-[80%] sm:max-w-[72%] text-left text-xs text-slate-900 shadow-2xs">
-                    <div class="flex items-center gap-1 text-[10px] font-bold text-[#075E54] mb-1 font-mono">
-                      <span>⚡ Instant Flow Match</span>
-                      <span class="text-emerald-700 font-normal">· 0.2s</span>
-                    </div>
-                    <p class="font-medium text-slate-900 text-[11px] leading-relaxed">Broadcast Tier Quota verified: Unlimited Throughput. No per-seat license needed.</p>
-                    <div class="mt-2 pt-1.5 border-t border-emerald-200/60 flex items-center gap-2">
-                      <span class="text-[9px] font-bold text-[#075E54] bg-white/90 px-2 py-0.5 rounded-full">Automated Handoff</span>
-                      <span class="text-[9px] font-mono text-slate-600">Enterprise Desk</span>
-                    </div>
-                  </div>
+              <!-- Video Container (16:9 Aspect Ratio) -->
+              <div class="relative aspect-video w-full bg-slate-950 overflow-hidden cursor-pointer" id="hero-video-container">
+                <video 
+                  id="hero-video-player"
+                  class="w-full h-full object-cover"
+                  autoplay 
+                  loop 
+                  muted 
+                  playsinline 
+                  preload="auto"
+                  poster="images/hero_video_poster.jpg"
+                >
+                  <source id="hero-video-source" src="videos/hero_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                <!-- Floating Play/Pause & Audio Toggle Controls Overlay -->
+                <div class="absolute bottom-3 right-3 flex items-center gap-2 z-20">
+                  <button 
+                    id="hero-video-sound-toggle" 
+                    class="p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white backdrop-blur-md border border-white/20 transition-all transform hover:scale-110 shadow-lg text-xs" 
+                    title="Unmute / Mute Audio"
+                    aria-label="Toggle Sound"
+                  >
+                    <!-- Audio Muted Icon (Default) -->
+                    <svg id="icon-sound-muted" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                    </svg>
+                    <!-- Audio Active Icon -->
+                    <svg id="icon-sound-active" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    </svg>
+                  </button>
+
+                  <button 
+                    id="hero-video-play-toggle" 
+                    class="p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white backdrop-blur-md border border-white/20 transition-all transform hover:scale-110 shadow-lg text-xs" 
+                    title="Pause / Play Video"
+                    aria-label="Toggle Play Pause"
+                  >
+                    <!-- Pause Icon (Default) -->
+                    <svg id="icon-video-pause" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6" />
+                    </svg>
+                    <!-- Play Icon -->
+                    <svg id="icon-video-play" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
                 </div>
 
               </div>
 
-              <!-- Card Footer Telemetry -->
-              <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-mono text-slate-500">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  Meta Cloud API: 99.99% Uptime
-                </span>
-                <span class="font-bold text-[#075E54]">Zero-Ban Shield Active</span>
-              </div>
-
             </div>
 
-            <!-- Authentic Connect Stream Brand Character: The Digital Entrepreneur -->
-            <!-- Profile 02: Standing proudly in front (z-30) with completed phone casing & zero image clipping -->
-            <div class="absolute bottom-0 right-0 sm:right-2 lg:-right-3 w-[275px] sm:w-[315px] pointer-events-none z-30 animate-float-subtle">
-              <img 
-                src="images/characters/character_entrepreneur.png" 
-                alt="Connect Stream Digital Entrepreneur Profile" 
-                class="w-full h-auto object-contain drop-shadow-2xl"
-              />
-            </div>
-
-            <!-- Floating Pill Badge 1: Unlimited Seats -->
-            <div class="absolute -top-3.5 -left-2 bg-white/95 backdrop-blur-md border border-slate-200 px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2 z-40">
-              <div class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold font-mono">
-                ∞
+            <!-- Floating Pill Badge 1: Meta Verified (Top Left) -->
+            <div class="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md border border-slate-200/90 px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2.5 z-30 animate-float-subtle">
+              <div class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold font-mono shadow-xs">
+                ⚡
               </div>
               <div>
-                <div class="text-[11px] font-bold text-slate-900">Unlimited Team Seats</div>
-                <div class="text-[9px] font-mono text-slate-500">No agent license penalties</div>
+                <div class="text-xs font-bold text-slate-900 flex items-center gap-1">
+                  <span>ConnectStream Cloud</span>
+                  <svg class="w-3.5 h-3.5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <div class="text-[10px] font-mono text-emerald-600 font-semibold">Official Meta Tech Partner</div>
               </div>
             </div>
 
-            <!-- Floating Pill Badge 2: Live Conversions -->
-            <div class="absolute -bottom-4 left-4 bg-white/95 backdrop-blur-md border border-emerald-200/90 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-2.5 z-40">
+            <!-- Floating Pill Badge 2: Open Rate & Engagement (Bottom Left) -->
+            <div class="absolute -bottom-4 -left-2 bg-white/95 backdrop-blur-md border border-emerald-200/90 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 z-30 shadow-emerald-950/10">
               <div class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-ping"></div>
               <div>
-                <div class="text-[11px] font-bold text-[#075E54] font-display">100,000 Messages Sent</div>
-                <div class="text-[9px] font-mono text-slate-500">98.4% Open Rate Verified</div>
+                <div class="text-xs font-bold text-[#075E54] font-display">98.4% Open Rate Verified</div>
+                <div class="text-[10px] font-mono text-slate-500">100,000+ Messages Delivered</div>
+              </div>
+            </div>
+
+            <!-- Floating Pill Badge 3: Conversions (Bottom Right) -->
+            <div class="absolute -bottom-4 -right-2 bg-white/95 backdrop-blur-md border border-slate-200/90 px-3.5 py-2 rounded-2xl shadow-xl hidden sm:flex items-center gap-2 z-30">
+              <span class="text-base">🚀</span>
+              <div class="text-[10px] font-bold text-slate-800">
+                <span>3X In-Thread Checkout</span>
+                <span class="block text-[9px] font-mono text-emerald-600">Zero-Seat Licensing</span>
               </div>
             </div>
 
@@ -1541,6 +1573,79 @@
       if (btn) {
         btn.addEventListener('click', window.toggleMobileMenu);
       }
+    })();
+
+    // Hero Video Player Controls & Instant Video 1 / Video 2 Switcher
+    (function initHeroVideo() {
+      const player = document.getElementById('hero-video-player');
+      const soundBtn = document.getElementById('hero-video-sound-toggle');
+      const playBtn = document.getElementById('hero-video-play-toggle');
+      const iconSoundMuted = document.getElementById('icon-sound-muted');
+      const iconSoundActive = document.getElementById('icon-sound-active');
+      const iconPause = document.getElementById('icon-video-pause');
+      const iconPlay = document.getElementById('icon-video-play');
+      const container = document.getElementById('hero-video-container');
+
+      if (!player) return;
+
+      // Audio toggle (unmute / mute)
+      if (soundBtn) {
+        soundBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          player.muted = !player.muted;
+          if (player.muted) {
+            if (iconSoundMuted) iconSoundMuted.classList.remove('hidden');
+            if (iconSoundActive) iconSoundActive.classList.add('hidden');
+          } else {
+            if (iconSoundMuted) iconSoundMuted.classList.add('hidden');
+            if (iconSoundActive) iconSoundActive.classList.remove('hidden');
+          }
+        });
+      }
+
+      // Play / Pause toggle
+      function togglePlayPause(e) {
+        if (e) e.stopPropagation();
+        if (player.paused) {
+          player.play();
+          if (iconPause) iconPause.classList.remove('hidden');
+          if (iconPlay) iconPlay.classList.add('hidden');
+        } else {
+          player.pause();
+          if (iconPause) iconPause.classList.add('hidden');
+          if (iconPlay) iconPlay.classList.remove('hidden');
+        }
+      }
+
+      if (playBtn) playBtn.addEventListener('click', togglePlayPause);
+      if (container) container.addEventListener('click', togglePlayPause);
+
+      // Instant Video 1 / Video 2 Switcher
+      window.switchHeroVideo = function(num) {
+        const source = document.getElementById('hero-video-source');
+        const btn1 = document.getElementById('btn-switch-vid1');
+        const btn2 = document.getElementById('btn-switch-vid2');
+        if (!player || !source) return;
+
+        const isVid2 = num === 2;
+        source.src = isVid2 ? 'videos/hero_video_2.mp4' : 'videos/hero_video_1.mp4';
+        player.load();
+        player.play().catch(() => {});
+
+        if (btn1 && btn2) {
+          if (isVid2) {
+            btn2.className = 'px-2.5 py-1 rounded-lg bg-emerald-600 text-white shadow-xs transition-all flex items-center gap-1';
+            btn2.innerHTML = '<span>Video 2</span><span class="text-[9px] bg-white/20 px-1 rounded">Active</span>';
+            btn1.className = 'px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-all flex items-center gap-1';
+            btn1.innerHTML = '<span>Video 1</span>';
+          } else {
+            btn1.className = 'px-2.5 py-1 rounded-lg bg-emerald-600 text-white shadow-xs transition-all flex items-center gap-1';
+            btn1.innerHTML = '<span>Video 1</span><span class="text-[9px] bg-white/20 px-1 rounded">Active</span>';
+            btn2.className = 'px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-all flex items-center gap-1';
+            btn2.innerHTML = '<span>Video 2</span>';
+          }
+        }
+      };
     })();
   </script>
 
