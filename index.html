@@ -389,14 +389,14 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION (Shopify Cinematic Background Video & Layout) ==================== -->
-  <section class="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#02090a] text-white pt-10 sm:pt-14 lg:pt-20 pb-16">
+  <!-- ==================== HERO SECTION (Shopify Clean Full-Visibility Video & Balanced Layout) ==================== -->
+  <section class="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#02090a] text-white pt-10 sm:pt-14 pb-16">
     
-    <!-- Edge-to-Edge Cinematic Background Video (Shopify Style) -->
+    <!-- Edge-to-Edge Cinematic Background Video (100% Visible & Crisp) -->
     <div class="absolute inset-0 size-full overflow-hidden z-0">
       <video 
         id="hero-video-player"
-        class="w-full h-full object-cover object-center lg:object-right scale-105 transition-opacity duration-700"
+        class="w-full h-full object-cover object-center scale-100 transition-opacity duration-700"
         autoplay 
         loop 
         muted 
@@ -407,48 +407,48 @@
         <source id="hero-video-source" src="videos/hero_video_1.mp4" type="video/mp4" />
       </video>
 
-      <!-- Shopify Left-to-Right Heavy Dark Scrim (Keeps left text 100% solid & readable; right reveals video) -->
-      <div class="absolute inset-0 bg-gradient-to-r from-[#02090a] via-[#02090a]/95 via-35% md:via-45% to-[#02090a]/40 z-10 pointer-events-none"></div>
+      <!-- Soft Overall Dark Filter for Text Readability without Heavy Shadows (Video fully visible everywhere) -->
+      <div class="absolute inset-0 bg-black/35 z-10 pointer-events-none"></div>
       
-      <!-- Top & Bottom Cinematic Edge Vignettes -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[#02090a] via-transparent via-60% to-[#02090a]/85 z-10 pointer-events-none"></div>
+      <!-- Subtle Vignette Edges (Top header & Bottom transition only) -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#02090a]/80 via-transparent via-50% to-[#02090a]/50 z-10 pointer-events-none"></div>
     </div>
 
-    <!-- Main Hero Content Container (Shopify Exact Left-Aligned Typography & Pill Placement) -->
-    <div class="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 w-full flex-1 flex flex-col justify-end pb-8 sm:pb-12 my-auto">
+    <!-- Main Hero Content Container (Comfortably Centered & Spaced) -->
+    <div class="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 w-full flex-1 flex flex-col justify-center my-auto py-12 lg:py-16">
       
-      <!-- Left-Constrained Text Content Block (max-w-xl prevents any clash with right-side video graphics) -->
-      <div class="max-w-xl lg:max-w-2xl text-left">
+      <!-- Left-Aligned Content Block with High-Contrast Text Shadows -->
+      <div class="max-w-2xl text-left">
         
         <!-- Official Meta Tech Provider Pill Badge -->
-        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-xs font-semibold backdrop-blur-md mb-6 transition-all w-fit shadow-lg shadow-black/40">
-          <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/50 hover:bg-black/70 border border-white/25 text-white text-xs font-semibold backdrop-blur-md mb-8 transition-all w-fit shadow-xl">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"></span>
           <span class="font-mono tracking-wide text-emerald-300 font-bold">Official Meta Cloud API Infrastructure</span>
           <span class="text-white/30">•</span>
           <span class="text-white/90">Verified Partner</span>
         </div>
 
-        <!-- Main Display Headline (Shopify Light Display 80px Scale) -->
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-light tracking-[-0.03em] leading-[1.05] text-white mb-8">
+        <!-- Main Display Headline (Shopify Light Display Scale with Sharp Contrast Shadow) -->
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light tracking-[-0.03em] leading-[1.04] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] mb-8">
           Pay for utility.<br />
           <span class="font-normal text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-[#25D366] to-teal-200">
             Never for seats.
           </span>
         </h1>
 
-        <!-- Pill Action Buttons (Shopify Exact Primary White & Translucent Outline Pills) -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-12">
+        <!-- Pill Action Buttons (Shopify Primary White & Translucent Outline Pills) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-4">
           <!-- Primary Solid White Pill -->
-          <a href="https://app.connectstream.io" class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-sm sm:text-base font-bold text-slate-950 bg-white hover:bg-slate-100 shadow-xl shadow-white/15 transition-all hover:scale-105 active:scale-95">
+          <a href="https://app.connectstream.io" class="inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full text-base sm:text-lg font-bold text-slate-950 bg-white hover:bg-slate-100 shadow-2xl shadow-black/60 transition-all hover:scale-105 active:scale-95">
             <span>Launch Your Workspace</span>
-            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
             </svg>
           </a>
 
           <!-- Secondary Translucent Outline Pill -->
-          <a href="https://wa.me/97455603231" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-white/10 hover:bg-white/20 border-2 border-white/30 backdrop-blur-md transition-all hover:scale-105 active:scale-95">
-            <svg class="w-4 h-4 fill-[#25D366]" viewBox="0 0 24 24">
+          <a href="https://wa.me/97455603231" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-base sm:text-lg font-semibold text-white bg-black/40 hover:bg-black/60 border-2 border-white/30 backdrop-blur-md transition-all hover:scale-105 active:scale-95 shadow-xl">
+            <svg class="w-5 h-5 fill-[#25D366]" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.712.073-2.3-1.025-1.282-.888-2.094-2.164-2.158-2.25-.064-.085-.521-.692-.521-1.321 0-.629.33-1.002.447-1.129.117-.128.256-.16.342-.16.085 0 .17.001.245.006.079.004.187-.03.29.222.106.255.362.883.394.947.032.064.053.139.011.223-.043.085-.064.139-.128.213-.064.075-.137.167-.195.225-.064.064-.132.133-.057.261.075.128.333.548.714.887.491.437.905.573 1.033.637.128.064.202.053.277-.032.075-.085.32-.373.405-.501.085-.128.17-.107.288-.064.117.043.746.352.874.416.128.064.213.096.245.149.032.053.032.31-.112.715z"/>
             </svg>
             <span>Chat on WhatsApp</span>
@@ -458,31 +458,31 @@
       </div>
 
       <!-- Bottom Bar: Verified Proof Metrics (Left) + Discreet Floating Video Controls (Right) -->
-      <div class="pt-6 border-t border-white/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="pt-8 border-t border-white/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mt-auto">
         
         <!-- Live Verified Proof Metrics -->
         <div class="flex flex-wrap items-center gap-6 sm:gap-10">
           <div>
-            <div class="text-2xl sm:text-3xl font-extralight text-white font-display">3X</div>
+            <div class="text-2xl sm:text-3xl font-extralight text-white font-display drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">3X</div>
             <div class="text-[11px] font-medium text-slate-300 mt-0.5">Better Conversions</div>
             <div class="text-[10px] text-emerald-400 font-mono">In-thread checkout</div>
           </div>
           <div class="h-8 w-px bg-white/15 hidden sm:block"></div>
           <div>
-            <div class="text-2xl sm:text-3xl font-extralight text-emerald-400 font-display">98.4%</div>
+            <div class="text-2xl sm:text-3xl font-extralight text-emerald-400 font-display drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">98.4%</div>
             <div class="text-[11px] font-medium text-slate-300 mt-0.5">Open Rate Verified</div>
             <div class="text-[10px] text-slate-400 font-mono">100k+ messages sent</div>
           </div>
           <div class="h-8 w-px bg-white/15 hidden sm:block"></div>
           <div>
-            <div class="text-2xl sm:text-3xl font-extralight text-white font-display">99.9%</div>
+            <div class="text-2xl sm:text-3xl font-extralight text-white font-display drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">99.9%</div>
             <div class="text-[11px] font-medium text-slate-300 mt-0.5">Risk-Free Delivery</div>
             <div class="text-[10px] text-emerald-400 font-mono">Meta Cloud Quotas</div>
           </div>
         </div>
 
         <!-- Floating Glass Video Switcher & Audio Controls (Shopify Discreet Pill) -->
-        <div class="flex items-center gap-2.5 bg-slate-950/70 hover:bg-slate-950/90 backdrop-blur-xl border border-white/20 p-2 rounded-2xl shadow-2xl transition-all">
+        <div class="flex items-center gap-2.5 bg-black/60 hover:bg-black/80 backdrop-blur-xl border border-white/20 p-2 rounded-2xl shadow-2xl transition-all">
           
           <!-- Sound Unmute / Mute Toggle -->
           <button id="hero-sound-toggle-btn" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-medium transition cursor-pointer" title="Toggle Sound">
